@@ -1,14 +1,15 @@
 # HOW TO NACHOS
+### IFT320, Programmation Système, Michael Fortin
+### 8h30 @ 10h20, Mardi 24 septembre 2019
+
 <br>
-#### IFT320, *Michael Fortin*
-#### 8h30 @ 10h20, Mardi 24 septembre 2019
 
 **Fonctionnement du TP2, NACHOS, selon les notes de cours prises par *Lucien B. Regout.***
 
 ---
 <br>
 
-#####READ(int Pos_depart, Byte* DATA, int Size, int deplacement):
+##### READ(int Pos_depart, Byte* DATA, int Size, int deplacement):
 
 1. Utiliser la clé pour retrouver l'entrée de la table des fichiers ouverts.
 2. Obtenir l'emplacement physique du fichier dans l'entrée de table des fichiers ouverts.
@@ -50,8 +51,9 @@
 <br>
 
 ##### Table des fichiers ouverts
+
 |Processus ID |Nom |List car |Empl. Phys. |
-|-------------|-------------|-------------|-------------|
+|:-------------:|:-------------:|:-------------:|:-------------:|
 | Prog1 | mah_file | `FALSE` | 1233 |
 | Prog2 | mah_file | `FALSE` | 1233 |
 
@@ -63,8 +65,9 @@
 Les lettres représentes l'ordre des executions pour parvenir à faire le tout optimalement.
 <br>
 ##### Repertoire
+
 |Noms:|R| |mah_file| | Sylvestor | | FHLX | | MTM |
-|--|--|--|--|--|--|--|--|--|--|
+|:--|:--:|--|:--:|--|:--:|--|:--:|--|:--:|
 |Empl.:|0||1233||2152||5639||8000|
 
 <br>
@@ -111,8 +114,9 @@ Les lettres représentes l'ordre des executions pour parvenir à faire le tout o
 #### SYSTEM
 Est moifier par chaque appel `WRITE()`/`OPEN()`/`CLOSE()`.
 Ici, `Use` est un compteur du nombre total d'acces. 
-|Pos/ Clé|Use| Empl. Phys.|WRITE?|
-|--|--|--|--|
+
+|Pos / Clé|Use| Empl. Phys.|WRITE?|
+|:--:|:--:|:--:|:--:|
 |0|2|1233|`FALSE`|
 |1|1|2152|`FALSE`|
 |2|1|5637|`TRUE`|
