@@ -1,5 +1,5 @@
 # HOW TO NACHOS
-### IFT320, Programmation Système, Michael Fortin
+### IFT320, Programmation Système, *Michael Fortin*
 ### 8h30 @ 10h20, Mardi 24 septembre 2019
 
 <br>
@@ -9,7 +9,7 @@
 ---
 <br>
 
-##### READ(int Pos_depart, Byte* DATA, int Size, int deplacement):
+##### `void READ(int Pos_depart, Byte* DATA, int Size, int deplacement)`
 
 1. Utiliser la clé pour retrouver l'entrée de la table des fichiers ouverts.
 2. Obtenir l'emplacement physique du fichier dans l'entrée de table des fichiers ouverts.
@@ -17,7 +17,7 @@
 
 <br>
 
-##### int OPEN(String Nom_Fichier, Bool is_it_in_write_mode)
+##### `int OPEN(String Nom_Fichier, Bool is_it_in_write_mode)`
 1. Lire le répertoire
 2. Chercher le nom dans le répertoire
    - Si trouvé
