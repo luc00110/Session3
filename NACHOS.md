@@ -58,9 +58,9 @@
 | Prog2 | mah_file | `FALSE` | 1233 |
 
 ---
-<br>
 ### Comportement du programme
-> Ceci est un exemple de nachos mais un peu plus complexe, sans struct, algo complexe, ni accès croisés... ~~(w/e it means)~~
+
+> Ceci est un exemple de nachos mais un peu plus complexe, sans structures, algorithmes complexes, ni accès croisés.
 
 Les lettres représentes l'ordre des executions pour parvenir à faire le tout optimalement.
 <br>
