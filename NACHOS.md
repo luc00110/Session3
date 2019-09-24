@@ -1,6 +1,6 @@
-#HOW TO NACHOS
+# HOW TO NACHOS
 <br>
-####IFT320, *Michael Fortin*
+#### IFT320, *Michael Fortin*
 #### 8h30 @ 10h20, Mardi 24 septembre 2019
 
 **Fonctionnement du TP2, NACHOS, selon les notes de cours prises par *Lucien B. Regout.***
@@ -16,7 +16,7 @@
 
 <br>
 
-#####int OPEN(String Nom_Fichier, Bool is_it_in_write_mode):
+##### int OPEN(String Nom_Fichier, Bool is_it_in_write_mode)
 1. Lire le répertoire
 2. Chercher le nom dans le répertoire
    - Si trouvé
@@ -26,7 +26,7 @@
 
 <br>
 
-#####Prog1 
+##### Prog1 
     CHAR DATA[100];
     
     int POS = OPEN("mah_file"; FALSE);
@@ -39,7 +39,7 @@
 
 <br>
 
-#####Prog2
+##### Prog2
     CHAR DATA[100];
     for(int i = 0; i < 100; i++){
         WRITE("mah_file", DATA, 1, i);
@@ -49,27 +49,27 @@
 
 <br>
 
-#####Table des fichiers ouverts:
+##### Table des fichiers ouverts
 |Processus ID |Nom |List car |Empl. Phys. |
 |-------------|-------------|-------------|-------------|
-| Prog1 | mah_file | FALSE | 1233 |
-| Prog2 | mah_file | FALSE | 1233 |
+| Prog1 | mah_file | `FALSE` | 1233 |
+| Prog2 | mah_file | `FALSE` | 1233 |
 
 ---
 <br>
-###Comportement du programme
-Ceci est un exemple de nachos mais un peu plus complexe, sans struct, algo complexe, ni accès croisés... (w/e it means)
+### Comportement du programme
+> Ceci est un exemple de nachos mais un peu plus complexe, sans struct, algo complexe, ni accès croisés... ~~(w/e it means)~~
 
 Les lettres représentes l'ordre des executions pour parvenir à faire le tout optimalement.
 <br>
-#####Repertoire:
+##### Repertoire
 |Noms:|R| |mah_file| | Sylvestor | | FHLX | | MTM |
 |--|--|--|--|--|--|--|--|--|--|
 |Empl.:|0||1233||2152||5639||8000|
 
 <br>
 
-#####Prog1:
+##### Prog1
     int F1 = OPEN(mah_file, FALSE); // A)
         ... //return 0
     int F2 = OPEN(Sylvestor, TRUE); // D)
@@ -83,7 +83,7 @@ Les lettres représentes l'ordre des executions pour parvenir à faire le tout o
 
 <br>
 
-#####Prog2:
+##### Prog2
     int F1 = OPEN(Sylvester, FALSE); // B)
         ... // return 0
     int F2 = OPEN(FHLX, TRUE); // G)
@@ -97,7 +97,7 @@ Les lettres représentes l'ordre des executions pour parvenir à faire le tout o
 
 <br>
 
-#####Prog3:
+##### Prog3
     int F1 = OPEN(FHLX, FALSE); // C)
         ... // return 0
     int F2 = OPEN(mah_file, FALSE); // E)
@@ -108,14 +108,14 @@ Les lettres représentes l'ordre des executions pour parvenir à faire le tout o
 
 <br>
 
-####SYS:
+#### SYSTEM
 Est moifier par chaque appel `WRITE()`/`OPEN()`/`CLOSE()`.
 Ici, `Use` est un compteur du nombre total d'acces. 
 |Pos/ Clé|Use| Empl. Phys.|WRITE?|
 |--|--|--|--|
-|0|2|1233|FALSE|
-|1|1|2152|FALSE|
-|2|1|5637|TRUE|
+|0|2|1233|`FALSE`|
+|1|1|2152|`FALSE`|
+|2|1|5637|`TRUE`|
 |...|0|?|?|
 |...|0|?|?|
 |...|0|?|?|
