@@ -10,21 +10,7 @@
 ### Tableau résumé
 |Type|Représentation emplacement physyque| Nombre d'accès direct|Fragmentation|Gestion espace libre|Changement de taille|Notes|
 |:-|:-|:-|:-|:-|:-|:-|
-|Contigu|Pos. début<br>Taille <br> O(1)|Début + Déplacement O(1)|Externe|Liste des espaces libres [pos, taille] triée par grandeur|Si pas d'espace libre contigu: Recopie du fichier O(N) au pire Squeeze O(Taille disque)|Voir **Fragmentation**|
-
-<br>
-
-#### Fragmentation
- - Externe
-   - Ralentir
-     - Algo First-Fit, Best-Fit, Worst-Fit
-   - Eliminer
-     - Squeeze
- - Interne
-   - Ralentir
-     - (À completer)
-   - Eliminer
-     - (À completer)
+|Contigu|Pos. début<br>Taille <br> O(1)|Début + Déplacement O(1)|Externe|Liste des espaces libres [pos, taille] triée par grandeur|Si pas d'espace libre contigu: Recopie du fichier O(N) au pire Squeeze O(Taille disque)|Voir [Fragmentation](#Fragmentation)|
 
 
 ---
@@ -93,11 +79,25 @@
 ### Algorithmes de gestions des espaces libres
 <br>
 
-##### BEST-FIT
+#### BEST-FIT
 > Connait la taille du répertoire et la taille est **statique**. Ceci maximise mes courbes ;)
 > 
-##### WORST-FIT
+#### WORST-FIT
 > Taille appeller à **augmenter**. Comme choisir du linge pour de jeunes enfants. Pour que ca dure le plus longtemps.
 > 
-##### FIRST-FIT
+#### FIRST-FIT
 > Pas d'information sur les changements de tailes. Ce veut être très **rapide**.
+
+<br>
+
+#### Fragmentation
+ - Externe
+   - Ralentir
+     - Algo First-Fit, Best-Fit, Worst-Fit
+   - Eliminer
+     - Squeeze
+ - Interne
+   - Ralentir
+     - (À completer)
+   - Eliminer
+     - (À completer)
