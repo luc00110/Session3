@@ -37,13 +37,11 @@
 ### Exemple d'un répertoire
 
 ##### Magnetic Tape File System ( *MTFS* )
-
 |Répertoire:||F1|Libre|F3|F4|Libre|F5|Libre|F6|F7|Libre|
-|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-|:-:|:-:|:-:|:-:|:-:|
 |Emplacement: |0|1024|5020|6044|14206|14334|14846|16894|19966|20666|22714|
 |Taille: |1ko|4ko|1ko|8ko|128o|512o|2ko|3ko|700o|8ko|182o|
-<br>
-<=>
+
 <br>
 
 ##### Fichiers sur un répertoire donné 
