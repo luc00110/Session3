@@ -1,5 +1,5 @@
 # HOW TO NACHOS
-### IFT320, Programmation Système, *Michael Fortin*
+### IFT320, Système d'exploitation, *Michael Fortin*
 ### 8h30 @ 10h20, Mardi 24 septembre 2019
 
 <br>
