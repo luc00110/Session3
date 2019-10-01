@@ -104,3 +104,5 @@
      - (À completer)
    - Eliminer
      - (À completer)
+
+Retour au [Tableau résumé](#Tableau-Résumé)
