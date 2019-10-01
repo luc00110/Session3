@@ -79,7 +79,7 @@
 <br>
 
 ---
-### Algorithmes de gestions des espaces libres
+### Algorithmes de gestion d'espaces libres
 <br>
 
 #### BEST-FIT
