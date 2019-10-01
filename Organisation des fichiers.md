@@ -10,7 +10,7 @@
 ### Tableau résumé
 |Type|Représentation emplacement physyque| Nombre d'accès direct|Fragmentation|Gestion espace libre|Changement de taille|Notes|
 |:-|:-|:-|:-|:-|:-|:-|
-|Contigu|Pos. début<br>Taille <br> O(1)|Début + Déplacement O(1)|Externe|Liste espaces libres [Pos,Taille] triée par grandeur|Si pas d'espace libre contigu: Recopie du fichier O(N) au pire Squeeze O(Taille disque)|Voir [Fragmentation](#Fragmentation)|
+|Contigu|Pos. début<br>Taille <br> O(1)|Début + Déplacement O(1)|Externe|Liste espaces libres [Position,Taille] triée par grandeur|Si pas d'espace libre contigu: Recopie du fichier O(N) au pire Squeeze O(Taille disque)|Voir [Fragmentation](#Fragmentation)|
 
 
 ---
