@@ -1,17 +1,18 @@
 # Organisation des fichiers
 ### IFT320 - Système d'exploitation, *Michael Fortin*
-### Mardi 1<sup>er</sup> octobre 2019
+### Mardi 1<sup>er</sup> et mercredi 2<sup>e</sup> d'octobre, 2019
 
-**Notes de cours prises par *Lucien B. Regout.* À completer.**
+**Notes de cours prises par *Lucien B. Regout.***
 
 ---
 <br>
 
 ### Tableau résumé
-|Type|Représentation emplacement physyque| Nombre d'accès direct|Fragmentation|Gestion espace libre|Changement de taille|Notes|
-|:-|:-|:-|:-|:-|:-|:-|
-|Contigu|Pos. début<br>Taille <br> O(1)|Début + Déplacement O(1)|Externe|Liste espaces libres [Position,Taille] triée par grandeur|Si pas d'espace libre contigu: Recopie du fichier O(N) au pire Squeeze O(Taille disque)|Voir [Fragmentation](#Fragmentation)|
-
+|Type|Représentation emplacement physyque| Nombre d'accès direct|Fragmentation|[Gestion espace libre](#Algorithmes-de-gestion-d'espaces-libres)|Changement de taille|Protection de dommanges|
+|:-|:-|:-|:-|:-|:-|:-|:-|
+|[Contigu](#Contigu)|Pos. début<br>Taille <br> **O(1)**|Début + Déplacement **O(1)**|[Externe](#Externe)|Liste espaces libres [Position,Taille] triée par grandeur|<ul><li>**O(1)** Si espace libre contigu<li>**O(n)** Si un trou libre assez grand existe<li>**O(Taille Disque)** Si fragment</ul>|Copies de sûretées|
+|[Liste chainée](#Liste-chainée)|<ul><li>Numéro bloc départ <li> Taille (n) <li> Un numéro bloc suivant par bloc (n/taille bloc) <li> position dernier bloc <li> **O(n)**</ul>| <ul><li>Nb de blocs <li>**O(n/2)** <li>Si fin fichier, **O(1)**</ul>|[Interne](#Interne)|<ol><li>Liste chaînée<li>Liste chaînée d'index<li>Bitmap</ol>|**O(1)** Ajuster un bloc a la fin de la chaîne|<ul><li>Chainage vulnerable<ul><li>Chainage double </ul></ul>|
+|[Index](#Index)|||||||
 
 ---
 ### Arbres cycliques et acycliques. (À completer)
@@ -35,7 +36,7 @@
 
 ---
 
-### Exemple d'un répertoire
+### Contigu
 
 ##### Magnetic Tape File System ( *MTFS* )
 
@@ -69,40 +70,85 @@
 |14334|512o|
 |16894|3k|
 |22714|1862o|
-|||
 
 <br>
 
 ##### Remarque
  - Il est super complexe d'agrandir la taille d'un fichier dans se système.
 
+Retour au [Tableau résumé](#Tableau-Résumé)
 <br>
 
 ---
 ### Algorithmes de gestion d'espaces libres
 <br>
 
-#### BEST-FIT
-> Connait la taille du répertoire et la taille est **statique**. Ceci maximise mes courbes ;)
+##### Best-Fit
+> Connait la taille du répertoire et la taille est **statique**. Ceci maximise mes courbes. <br>- Louis 2019.
 > 
-#### WORST-FIT
+##### Worst-Fit
 > Taille appeller à **augmenter**. Comme choisir du linge pour de jeunes enfants. Pour que ca dure le plus longtemps.
 > 
-#### FIRST-FIT
+##### Firs-Fit
 > Pas d'information sur les changements de tailes. Ce veut être très **rapide**.
 
 <br>
 
 #### Fragmentation
- - Externe
-   - Ralentir
+ - ###### Externe
+   - Retarder
      - Algo First-Fit, Best-Fit, Worst-Fit
    - Eliminer
-     - Squeeze
- - Interne
-   - Ralentir
-     - (À completer)
+     - Squeeze : Consolider l'espace libre. 
+ - ###### Interne
+   - Retarder
+     - 2 différentes tialles de bloc et on alloue les petits blocs aux petits fichiers.
    - Eliminer
-     - (À completer)
+     - Tail-packing (difficile)
+     - Stocker des données (compactes) dasn l'en-tête ou, pire encore, dans l'entré de répertoire.
+
+Retour au [Tableau résumé](#Tableau-Résumé)
+
+##### Fragmentation Externe
+>Assez de capacité pour l'utilisation. Cependant, il est séparé en petits morceaux.
+
+##### Fragmentation Interne
+>Taille Disque = 2<sup>40</sup>
+>Taille Bloc = 8ko = 2<sup>13</sup>
+>Si, en moyenne, la taille d'un fichier est de 1ko, et qu'on en réserve 75ko, on perds énormément d'espace.
+
+
+##### Système à 2 tailles de blocs
+>Minimise la perte d'espace dû a la fragmentation interne.
+>Plus simple d'implémenter 2, voir 3, tailles de blocs pour minimiser la perte d'espace avec la fragmentation interne. Plus simple que la technique Tail-Packing.
+
+Si la taille est moins d'un petit bloc, assigne un petit bloc.
+Si la taille est plus grande qu'un petit bloc, assigner un gros bloc.
+
+
+### Liste chaînée
+|7|⇄|11|⇄|13|⇄|3|⇄|14|⇄|25|⇄|12|⇄|20|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+
+
+    TB == Taille de bloc
+    TI == Taille Index
+    N == Nombre de blocs
+    TF == Taille Fichier
+
+    N = N/TB
+    TI = 4
+    N/TI = Bloc d'Index
+
+    Complexité = O((N/TB)/TI)
+
+Exemple, avec un fichier de 1Go, puis des blocs de 1ko:
+
+    TF = 2^30
+    N = 2^10
+    TI = 2^8
+
+    (2^30)/(2^12) = 2^18
+    -> 2^18 / 2^10 = 2^8
 
 Retour au [Tableau résumé](#Tableau-Résumé)
