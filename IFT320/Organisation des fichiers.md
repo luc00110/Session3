@@ -8,7 +8,7 @@
 <br>
 
 ### Tableau résumé
-|Type|Représentation emplacement physyque| Nombre d'accès direct|Fragmentation|[Gestion espace libre](#Algorithmes-de-gestion-d'espaces-libres)|Changement de taille|Protection de dommanges|
+|Type|Représentation emplacement physyque| Nombre d'accès direct|Fragment- ation|[Gestion espace libre](#Algorithmes-de-gestion-d'espaces-libres)|Changement de taille|Protection de dommanges|
 |:-|:-|:-|:-|:-|:-|:-|
 |[Contigu](#Contigu)|Pos. début<br>Taille <br> **O(1)**|Début + Déplacement **O(1)**|[Externe](#Externe)|Liste espaces libres [Position,Taille] triée par grandeur|<ul><li>**O(1)** Si espace libre contigu<li>**O(n)** Si un trou libre assez grand existe<li>**O(Taille Disque)** Si fragment</ul>|Copies de sûretées|
 |[Liste chainée](#Liste-chainée)|<ul><li>Numéro bloc départ <li> Taille (n) <li> Un numéro bloc suivant par bloc (n/taille bloc) <li> position dernier bloc <li> **O(n)**</ul>| <ul><li>Nb de blocs <li>**O(n/2)** <li>Si fin fichier, **O(1)**</ul>|[Interne](#Interne)|<ol><li>Liste chaînée<li>Liste chaînée d'index<li>Bitmap</ol>|**O(1)** Ajuster un bloc a la fin de la chaîne|<ul><li>Chainage vulnerable<ul><li>Chainage double </ul></ul>|
