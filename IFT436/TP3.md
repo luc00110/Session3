@@ -60,3 +60,43 @@
 
 
 Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsqu'il se rendra au plus long parcours précédent le bassin final, et se 5 fois. La 5<sup>e</sup> fois, le sera possiblement différent mais restera cependant couvers par l'algorithme.
+
+
+<br>
+
+### \#3 a)
+
+**Matrices d'adjacence:**
+<table>
+<tr><th>
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>     
+<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/Gites_Orange.png">
+<br>c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d
+</th><!--<th></th>--><th>
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>     
+<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/Gites_Rose.png">
+<br>c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d
+</th></tr>
+<!--
+<tr><td></td><td></td><td></td></tr>
+-->
+<tr><td>
+
+||a|b|c|d|
+|-|-|-|-|-|
+|**a**|0|1|1|1|
+|**b**|1|0|0|0|
+|**c**|1|0|0|0|
+|**d**|1|0|0|0|
+
+</td><!--<td></td>--><td>
+
+||a|b|c|d|
+|-|-|-|-|-|
+|**a**|0|0|1|0|
+|**b**|0|0|1|1|
+|**c**|1|1|0|0|
+|**d**|0|1|0|0|
+
+</td></tr>
+</table>
