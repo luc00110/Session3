@@ -69,17 +69,14 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
 **Matrices d'adjacence:**
 <table>
 <tr><th>
-a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>     
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>&nbsp; 
 <img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/Gites_Orange.png">
 <br>c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d
-</th><!--<th></th>--><th>
-a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>     
+</th><th>
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>&nbsp;     
 <img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/Gites_Rose.png">
 <br>c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d
 </th></tr>
-<!--
-<tr><td></td><td></td><td></td></tr>
--->
 <tr><td>
 
 ||a|b|c|d|
@@ -89,7 +86,7 @@ a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 |**c**|1|0|0|0|
 |**d**|1|0|0|0|
 
-</td><!--<td></td>--><td>
+</td><td>
 
 ||a|b|c|d|
 |-|-|-|-|-|
@@ -100,3 +97,30 @@ a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 
 </td></tr>
 </table>
+
+**Entrées:** Un graph **G** tel que  **G** = (**V**,**E**) qui est non dirigé.
+**Résultat:** Si le graph est un arbre ou non.
+
+**Algo:**
+
+    u ← Sommet alléatoir dans V
+    Visites ← 0
+    visiter(x):
+        Si x est marqué alors
+            retourner Non_Arbre 
+        marquer x
+        Visites ← Visites + 1
+        Pour chacun des autres voisins immédiats y qui appartiennent a V: x → y
+            visiter(y)
+    visiter(u)
+    Si Visites != |V|
+        retourner Non_Arbre
+    Sinon
+        retourner Est_Arbre
+
+Cet algorithme parcours le graph au complet. Si un sommet est visité plus d'une fois, c'est cyclique. Cela est uniquement véridicte lorsqu'on empêche de visiter le noeud précédents en visitant tous les voisins immédiats.
+
+Deplus, tous les sommets peuvent être visiter moins de deux fois et tout de même il pourrait y manquer certains sommets, d'ou la vérification si le nombre de visites est bien égale a la somme des sommets dans le graphes!
+<br>
+
+### \# 3 b)
