@@ -9,8 +9,8 @@
 #### e)
 
 #### f)
-**Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale **u** tel que **u** appartien à **V**.
-**Resultat:** Une sequence **S** de bassins de temps maximal dans le manège.
+**Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale **u** tel que **u** appartien à **V**. <br>
+**Resultat:** Une sequence **S** de bassins de temps maximal dans le manège. <br>
 
 
     S ← []
@@ -36,8 +36,8 @@
 <br>
 
 #### g)
-**Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale u tel que u appartien à **V** et le sommet **v** tel que **v** appartiens a **V** et que **v** est le bassin final.
-**Resultat:** Une sequence **S** de bassins, de temps maximal dans le manège, considérant que l'utilisateur peut remonter au bassin initial un maximum de 5 fois.
+**Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale u tel que u appartien à **V** et le sommet **v** tel que **v** appartiens a **V** et que **v** est le bassin final. <br>
+**Resultat:** Une sequence **S** de bassins, de temps maximal dans le manège, considérant que l'utilisateur peut remonter au bassin initial un maximum de 5 fois. <br>
 
     S ← []
     Ascensions ← 5 
@@ -74,8 +74,8 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
 
 ### \# 2
 #### a)
-**Entrees:** Une séquence **S** non vide d'éléments combarables.
-**Resultat:** La/les valeurs modales m trouvées dans la séquence **S**.
+**Entrees:** Une séquence **S** non vide d'éléments combarables. <br>
+**Resultat:** La/les valeurs modales m trouvées dans la séquence **S**. <br>
 
     pivot, mode ← [], modeQuant ← 0
     trouverMode(s)
@@ -143,8 +143,8 @@ a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 </td></tr>
 </table>
 
-**Entrées:** Un graph **G** tel que  **G** = (**V**,**E**) qui est non dirigé.
-**Résultat:** Si le graph est un arbre ou non.
+**Entrées:** Un graph **G** tel que  **G** = (**V**,**E**) qui est non dirigé. <br>
+**Résultat:** Si le graph est un arbre ou non. <br>
 
     u ← Sommet alléatoir dans V
     Visites ← 0
