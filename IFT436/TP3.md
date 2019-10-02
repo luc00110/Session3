@@ -98,7 +98,8 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
     retourner trouverMode(???) /// La recursion devrait être applée ici
     
 
-
+#### b)
+/// On fera le b) quand le a) sera fixed... :)
 
 <br>
 
@@ -144,8 +145,6 @@ a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 
 **Entrées:** Un graph **G** tel que  **G** = (**V**,**E**) qui est non dirigé.
 **Résultat:** Si le graph est un arbre ou non.
-
-**Algo:**
 
     u ← Sommet alléatoir dans V
     Visites ← 0
