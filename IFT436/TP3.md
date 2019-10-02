@@ -124,3 +124,29 @@ Deplus, tous les sommets peuvent être visiter moins de deux fois et tout de mê
 <br>
 
 ### \# 3 b)
+
+**Prouvez qu'il y a un minimum de 2<sup>*n*</sup> arbres couvrant pour un graphe acyclique non ordonné possibles, pour un minimum de 4 Vertices.**
+
+Une facons compréhensive de le démontrer est de représenter chacun des sommets comme une valeurs binaire. Lors d'un compte binaire (*ie*: l'évaluation de 101<sub>2</sub> qui donne 5) on réalise qu'il y a jusqu'a 8 manières différentes d'agencer 3 valeurs, trois sommets. Maintenant, si nous retrouvons 4 somets, il y a alors 4 valeurs qui peuvent être agencer jusqu'a 16 façons uniques. Ceci, qui suit cette même relation binaire, gradue en fonction du nombre d'objet à relier par le l'arbre couvrant *H* du graphe complet, acyclique et non dirigé *G*.
+
+Ainsi, avec *n* sommets, il y a 2<sup>*n*</sup> manières de les agencer afin de couvrir tout les sommets et d'accomplir la tâche requise! 
+
+### \# 3 c)
+<table>
+<tr><th>
+<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/Gites_Bleu.png">
+</th><th>
+<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/Gites_Vert.png">
+</th></tr>
+<tr><td>
+
+Dans cette image, on retrouve un arbre couvrant minimal qui couvre 4 sommets d'un graph G à 4 sommets. 
+
+Assumant qu'il y a 1 unité de distance entre les coins, du carré formé, adjacants, le graph aurait une longueur de:<br><br> **3 * 1 = 3 unités**
+
+</td><td>
+
+Dans celui-ci, le vert, le 'X' rouge représente un coté à oublié puis le point rouge, une interesection à ajouter. Maintenant, les gites sont équidistant de cette halte et la distance est de <br><br>**4(1/2)(1<sup>2</sup> + 1<sup>2</sup>)<sup>1/2</sup> = 2<sup>1/2</sup> =<br> 2.8284... unités**
+
+</td></tr>
+</table>
