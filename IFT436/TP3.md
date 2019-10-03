@@ -6,7 +6,7 @@
 **Questions:**
  - [ ] [Placement du "For All"](#1-d)
  - [ ] [Marqueurs soudjacants](#1-f)
- - [ ] [Est-ce qu'on peu passer plus d'une fois dans le bassin finale?](#1-g)
+ - [ ] [Est-ce qu'on peu passer plus d'une fois dans le bassin final?](#1-g)
  - [ ] [Justification](#3-b)
 
 
