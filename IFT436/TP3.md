@@ -28,6 +28,7 @@ Pour faire en sorte que le texte et le nom reconnu n'est pas le meme, faire comm
 <br>
 
 <h4 name="1-b">b)</h4>
+
 ***G*** ne peut pas être un cycle dû contraintes fournis ci-dessous. Grâce à cette première contraites plus bas, il est impossible qu'un cycle soit établi avec un seul bassin considérant qu'il y a aucun corridor qui part d'un dit bassin en arrivant dans ce même bassin. 
 Finalement, la seconde contrainte  implique que dû à l'inclinaison, l'un ne peut pas revenir au bassin précédent. Cela implique qu'il y a aucun cycle possible et que de ce fait, le manège aquatique ***G*** est acyclique et dirigé.
 >Il n'y a *pas* de corridor passant d'un bassin vers lui-même;
