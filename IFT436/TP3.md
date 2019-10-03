@@ -1,8 +1,18 @@
 ## TP3, IFT436
 
+
+---
+
+**Questions:**
+1. [Placement du "For All"](#1-d\))
+
+
+---
+
 ### \#1
 
-#### a)
+
+#### 1 a)
 ***V*** = Les bassins du manège aquatique (Sommets/Vertice).
 ***E*** = Les corridors entre les bassins, potentiellement des glissades(Arêtes/Edges).
 ***G***, manège aquatique, est dirigé, du à l'élevation. Élévation dénoté de l'énoncé suivant: 
@@ -10,7 +20,7 @@
 
 <br>
 
-#### b)
+#### 1 b)
 ***G*** ne peut pas être un cycle dû contraintes fournis ci-dessous. Grâce à cette première contraites plus bas, il est impossible qu'un cycle soit établi avec un seul bassin considérant qu'il y a aucun corridor qui part d'un dit bassin en arrivant dans ce même bassin. 
 Finalement, la seconde contrainte  implique que dû à l'inclinaison, l'un ne peut pas revenir au bassin précédent. Cela implique qu'il y a aucun cycle possible et que de ce fait, le manège aquatique ***G*** est acyclique et dirigé.
 >Il n'y a *pas* de corridor passant d'un bassin vers lui-même;
@@ -19,7 +29,7 @@ Finalement, la seconde contrainte  implique que dû à l'inclinaison, l'un ne pe
 
 <br>
 
-#### c)
+#### 1 c)
 Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements d'arêtes qui rendrait ***G*** cyclique. Toutefois, il y a toujours la possibilité qu'aucun cycle, simple ou non, ne soit présent et que le nombre d'arête soit équivalent au nombre de sommet - 1. De sorte que les propriétés suivantes soit respectées.
 
  - ***G*** est *connexe*
@@ -30,7 +40,7 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 
 <br>
 
-#### d)
+#### 1 d)
 ![For All](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/forall.png)
 
 ![Min](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/min.png)
@@ -40,12 +50,12 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 
 <br>
 
-#### e)
+#### 1 e)
 Bassin départ : de toutes les paires de sommets composants les arêtes, le sommet qui se retrouvera uniquement en index 0 de la paire, à la gauche, qui est donc toujours le sommet de départ, sera donc considéré comme sommet de départ.
 
 Bassin d'arrivée : Suivre le même résonnement, mais pour le sommet qui se retrouve toujours en index 1 de la paire et qui est donc toujours le bassin d'arrivée dans toutes les paires, sera donc considéré comme sommet d'arrivée.
 
-#### f)
+#### 1 f)
 **Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale **u** tel que **u** appartien à **V**. <br>
 **Resultat:** Une sequence **S** de bassins de temps maximal dans le manège. <br>
 
@@ -74,7 +84,7 @@ Bassin d'arrivée : Suivre le même résonnement, mais pour le sommet qui se ret
 
 <br>
 
-#### g)
+#### 1 g)
 **Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale u tel que u appartien à **V** et le sommet **v** tel que **v** appartiens a **V** et que **v** est le bassin final. <br>
 **Resultat:** Une sequence **S** de bassins, de temps maximal dans le manège, considérant que l'utilisateur peut remonter au bassin initial un maximum de 5 fois. <br>
 
@@ -113,7 +123,7 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
 ---
 
 ### \# 2
-#### a)
+#### 2 a)
 **Entrees:** Une séquence **S** non vide d'éléments combarables. <br>
 **Resultat:** La/les valeurs modales m trouvées dans la séquence **S**. <br>
 
@@ -138,7 +148,7 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
     retourner trouverMode(???) /// La recursion devrait être applée ici
     
 
-#### b)
+#### 2 b)
 /// On fera le b) quand le a) sera fixed... :)
 
 <br>
@@ -146,7 +156,7 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
 ---
 
 ### \#3 
-#### a)
+#### 3 a)
 **Donnez un algorithme qui détermine si un graphe non dirigé est un arbre.**
 
 <br>
@@ -206,7 +216,7 @@ Cet algorithme parcours le graph au complet. Si un sommet est visité plus d'une
 Deplus, tous les sommets peuvent être visiter moins de deux fois et tout de même il pourrait y manquer certains sommets, d'ou la vérification si le nombre de visites est bien égale a la somme des sommets dans le graphes!
 <br>
 
-#### b)
+#### 3 b)
 
 **Démontrez que le graphe complet *G<sub>n</sub>* possède au moins 2<sup>*n*</sup> arbres couvrants, pour tout *n* entier plus grand que 3.**
 
@@ -214,7 +224,7 @@ Une facons compréhensive de le démontrer est de représenter chacun des sommet
 
 Ainsi, avec *n* sommets, il y a 2<sup>*n*</sup> manières de les agencer afin de couvrir tout les sommets et d'accomplir la tâche requise! 
 
-#### c)
+#### 3 c)
 **Donnez un exemple de points ou un arbre couvrant minimal entre ces points est plus long qu'un arbre couvrant minimal avec un nouveau point ajouté (une halte).**
 <table>
 <tr><th>
