@@ -4,9 +4,9 @@
 ---
 
 **Questions:**
- - [Placement du "For All"](#1-d)
- - [Marqueurs soudjacants](#1-f)
- - [Justification](#3-b)
+ - [ ] [Placement du "For All"](#1-d)
+ - [ ] [Marqueurs soudjacants](#1-f)
+ - [ ] [Justification](#3-b)
 
 
 ---
