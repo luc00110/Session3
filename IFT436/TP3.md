@@ -31,7 +31,15 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 <br>
 
 #### d)
-PLACER L'ÉQUATION ICI, 'CAUSE I CAN'T. :(
+![For All](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/forall.png)
+
+![Min](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/min.png)
+
+![Max](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/max.png)
+
+
+<br>
+
 #### e)
 Bassin départ : de toutes les paires de sommets composants les arêtes, le sommet qui se retrouvera uniquement en index 0 de la paire, à la gauche, qui est donc toujours le sommet de départ, sera donc considéré comme sommet de départ.
 
@@ -45,7 +53,8 @@ Bassin d'arrivée : Suivre le même résonnement, mais pour le sommet qui se ret
     S ← []
     Ttot ← 0
     Parent ← u
-    parcours(x):   
+    parcours(x):
+
         SPrime ← S
         Temps ← Ttot
         si x n'est pas marqué alors
@@ -56,8 +65,9 @@ Bassin d'arrivée : Suivre le même résonnement, mais pour le sommet qui se ret
                 Ttot = Temps
                 S ← SPrime
             pour u appartiens a V: x → y
+                Parent ← x
                 parcours(y)
-                retirer les marqueurs soudjacants
+                /// retirer les marqueurs soudjacants
     parcours(u)
     retourner S
 
@@ -85,11 +95,12 @@ Bassin d'arrivée : Suivre le même résonnement, mais pour le sommet qui se ret
             si x DOIT se rendre à v ET que Ascension != 0 alors
                 Ascensions ← Ascension - 1
                 retirer les marqueurs
+                Parent ← S[0]
                 parcours(S[0]) // neoud
             Sinon 
                 pour u appartiens a V: x → y
+                    Parent ← x
                     parcours(y)
-                    retirer les marqueurs soudjacants
     parcours(u)
     retourner S
 
