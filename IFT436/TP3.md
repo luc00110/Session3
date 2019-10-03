@@ -3,10 +3,39 @@
 ### \#1
 
 #### a)
+***V*** = Les bassins du manège aquatique (Sommets/Vertice).
+***E*** = Les corridors entre les bassins, potentiellement des glissades(Arêtes/Edges).
+***G***, manège aquatique, est dirigé, du à l'élevation. Élévation dénoté de l'énoncé suivant: 
+>Puisque les bassins sont situés de plus en plus bas le long d'une colline, si on peut atteindre un bassin *j* à partir d'un bassin *i*, alors on ne peut *pas* atteindre le bassin *i* à partir du bassin *j*.
+
+<br>
+
 #### b)
+***G*** ne peut pas être un cycle dû contraintes fournis ci-dessous. Grâce à cette première contraites plus bas, il est impossible qu'un cycle soit établi avec un seul bassin considérant qu'il y a aucun corridor qui part d'un dit bassin en arrivant dans ce même bassin. 
+Finalement, la seconde contrainte  implique que dû à l'inclinaison, l'un ne peut pas revenir au bassin précédent. Cela implique qu'il y a aucun cycle possible et que de ce fait, le manège aquatique ***G*** est acyclique et dirigé.
+>Il n'y a *pas* de corridor passant d'un bassin vers lui-même;
+
+>Puisque les bassins sont situés de plus en plus bas le long d'une colline, si on peut atteindre un bassin *j* à partir d'un bassin *i*, alors on ne peut *pas* atteindre le bassin *i* à partir du bassin *j*.
+
+<br>
+
 #### c)
+Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements d'arêtes qui rendrait ***G*** cyclique. Toutefois, il y a toujours la possibilité qu'aucun cycle, simple ou non, ne soit présent et que le nombre d'arête soit équivalent au nombre de sommet - 1. De sorte que les propriétés suivantes soit respectées.
+
+ - ***G*** est *connexe*
+ - ***G*** est *Acyclique*
+ - |***E***| = |***V***| - 1 
+
+
+
+<br>
+
 #### d)
+PLACER L'ÉQUATION ICI, 'CAUSE I CAN'T. :(
 #### e)
+Bassin départ : de toutes les paires de sommets composants les arêtes, le sommet qui se retrouvera uniquement en index 0 de la paire, à la gauche, qui est donc toujours le sommet de départ, sera donc considéré comme sommet de départ.
+
+Bassin d'arrivée : Suivre le même résonnement, mais pour le sommet qui se retrouve toujours en index 1 de la paire et qui est donc toujours le bassin d'arrivée dans toutes les paires, sera donc considéré comme sommet d'arrivée.
 
 #### f)
 **Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale **u** tel que **u** appartien à **V**. <br>
