@@ -4,7 +4,7 @@
 ---
 
 **Questions:**
-1. [Placement du "For All"](#1-d\))
+1. [Placement du "For All"](#1-d)
 
 
 ---
