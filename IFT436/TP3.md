@@ -73,29 +73,32 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 
 **Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale **u** tel que **u** appartien à **V**. <br>
 **Resultat:** Une sequence **S** de bassins de temps maximal dans le manège. <br>
-
-
+<pre><code>
     S ← []
     Ttot ← 0
     Parent ← u
-    parcours(x):
 
+    parcours(x):
         SPrime ← S
         Temps ← Ttot
-        si x n'est pas marqué alors
+
+        <b>Si</b> x non marqué <b>alors</b>
             Temps ← Temps + c[Parent, x]
-            marquer x
-            ajouter x à SPrime
-            si Temps > Ttot alors
+            <b>marquer</b> x
+            <b>ajouter</b> x à SPrime
+
+            <b>Si</b> Temps > Ttot <b>alors</b>
                 Ttot = Temps
                 S ← SPrime
-            pour u appartiens a V: x → y
+
+            <b>Pour</b> u ∈ V: x → y
                 Parent ← x
                 parcours(y)
                 /// retirer les marqueurs soudjacants
-    parcours(u)
-    retourner S
 
+    parcours(u)
+    <b>Retourner</b> S
+</code></pre>
 
 <br>
 
@@ -104,32 +107,32 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 **Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale u tel que u appartien à **V** et le sommet **v** tel que **v** appartiens a **V** et que **v** est le bassin final. <br>
 **Resultat:** Une sequence **S** de bassins, de temps maximal dans le manège, considérant que l'utilisateur peut remonter au bassin initial un maximum de 5 fois. <br>
 <pre><code>
-    <i>S</i> ← []
-    <i>Ascensions</i> ← 5 
-    <i>Ttot</i> ← 0
-    <i>Parent</i> ← <i>u</i>
-    parcours(<i>x</i>):   
-        <i>SPrime</i> ← <i>S</i>
-        <i>Temps</i> ← <i>Ttot</i>
-        <b>Si</b> <i>x</i> non marqué <b>alors</b>
-            <i>Temps</i> ← <i>Temps</i> + c[<i>Parent</i>, <i>x</i>]
-            <b>marquer</b> <i>x</i>
-            <b>Ajouter</b> <i>x</i> à <i>SPrime</i>
-            <b>Si</b> <i>Temps</i> > <i>Ttot</i> <b>alors</b>
-                <i>Ttot</i> = <i>Temps</i>
-                <i>S</i> ← <i>SPrime</i>
-            <b>Si</b> <i>x</i> DOIT se rendre à <i>v</i> ET que <i>Ascension</i> != 0 <b>alors</b>
-                <i>Ascensions</i> ← <i>Ascensions</i> - 1
+    S ← []
+    Ascensions ← 5 
+    Ttot ← 0
+    Parent ← u
+    parcours(x):   
+        SPrime ← S
+        Temps ← Ttot
+        <b>Si</b> x non marqué <b>alors</b>
+            Temps ← Temps + c[Parent, x]
+            <b>marquer</b> x
+            <b>Ajouter</b> x à SPrime
+            <b>Si</b> Temps > Ttot <b>alors</b>
+                Ttot = Temps
+                S ← SPrime
+            <b>Si</b> x DOIT se rendre à v ET que Ascension != 0 <b>alors</b>
+                Ascensions ← Ascensions - 1
                 <b>retirer</b> marqueurs // Reverifier...
-                <i>Parent</i> ← <i>S</i>[0]
-                parcours(<i>S</i>[0]) // neoud
+                Parent ← S[0]
+                parcours(S[0]) // neoud
             <b>Sinon</b> 
-                <b>Pour</b> <i>u</i> ∈ <i>V</i>: <i>x</i> → <i>y</i>
-                    <i>Parent</i> ← <i>x</i>
-                    parcours(<i>y</i>)
-    parcours(<i>u</i>)
-    <b>Retourner</b> <i>S</i>
-</pre></code>
+                <b>Pour</b> u ∈ V: x → y
+                    Parent ← x
+                    parcours(y)
+    parcours(u)
+    <b>Retourner</b> S
+</code></pre>
 
 Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsqu'il se rendra au plus long parcours précédent le bassin final, et se 5 fois. La 5<sup>e</sup> fois, le sera possiblement différent mais restera cependant couvers par l'algorithme.
 
@@ -148,15 +151,16 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
 <pre><code>
     mode ← [], modeQty ← 0
     trouverMode(x)
-        <b>Si</b> |x| = 0 **alors</b> retourner mode
-        **Sinon</b>
+        <b>Si</b> |x| = 0 <b>alors</b> 
+            <b>Retourner</b> mode
+        <b>Sinon</b>
             pivot ← mediane(x)
 
             gauche ← [x ∈ S: x < picot]
             centre ← [x ∈ S: x = pivot]
             droite ← [x ∈ S: x > pivot]
 
-            <b>Si</b> |centre| = modeQty <b>lors</b>
+            <b>Si</b> |centre| = modeQty <b>alors</b>
                 <b>Ajouter</b> pivot à mode
             <b>Si</b> |centre| > modeQty <b>alors</b>
                 modeQty ← |centre|
@@ -165,7 +169,7 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
             <b>Sinon</b>
                 trouverMode(gauche)
                 trouverMode(droite)
-    retourner trouverMode(S)
+    <b>Retourner</b> trouverMode(S)
 </code></pre>
     
 <br>
@@ -220,21 +224,23 @@ a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 
 **Entrées:** Un graph **G** tel que  **G** = (**V**,**E**) qui est non dirigé. <br>
 **Résultat:** Si le graph est un arbre ou non. <br>
-
-    u ← Sommet alléatoir dans V
+<pre><code>
+    u ← Sommet quelconque ∈ V
     Visites ← 0
     visiter(x):
-        Si x est marqué alors
+        <b>Si</b> x est marqué <b>alors</b>
             retourner Non_Arbre 
-        marquer x
+        <b>Marquer</b> x
         Visites ← Visites + 1
-        Pour chacun des autres voisins immédiats y qui appartiennent a V: x → y
+        <b>Pour</b> tous voisins ∈ V: x → y
             visiter(y)
+    
     visiter(u)
-    Si Visites != |V|
-        retourner Non_Arbre
-    Sinon
-        retourner Est_Arbre
+    <b>Si</b> Visites != |V|
+        <b>Retourner</b> Non_Arbre
+    <b>Sinon</b>
+        <b>Retourner</b> Est_Arbre
+</code></pre>
 
 Cet algorithme parcours le graph au complet. Si un sommet est visité plus d'une fois, c'est cyclique. Cela est uniquement véridicte lorsqu'on empêche de visiter le noeud précédents en visitant tous les voisins immédiats.
 
