@@ -103,7 +103,7 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 
 **Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale u tel que u appartien à **V** et le sommet **v** tel que **v** appartiens a **V** et que **v** est le bassin final. <br>
 **Resultat:** Une sequence **S** de bassins, de temps maximal dans le manège, considérant que l'utilisateur peut remonter au bassin initial un maximum de 5 fois. <br>
-
+<pre><code>
     <i>S</i> ← []
     <i>Ascensions</i> ← 5 
     <i>Ttot</i> ← 0
@@ -129,7 +129,7 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
                     parcours(<i>y</i>)
     parcours(<i>u</i>)
     <b>Retourner</b> <i>S</i>
-
+</pre></code>
 
 Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsqu'il se rendra au plus long parcours précédent le bassin final, et se 5 fois. La 5<sup>e</sup> fois, le sera possiblement différent mais restera cependant couvers par l'algorithme.
 
