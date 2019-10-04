@@ -123,7 +123,7 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
                 S ← SPrime
             <b>Si</b> x DOIT se rendre à v ET que Ascension != 0 <b>alors</b>
                 Ascensions ← Ascensions - 1
-                <b>retirer</b> marqueurs // Reverifier...
+                <b>Retirer</b> marqueurs // Reverifier...
                 Parent ← S[0]
                 parcours(S[0]) // neoud
             <b>Sinon</b> 
@@ -232,7 +232,7 @@ a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
             retourner Non_Arbre 
         <b>Marquer</b> x
         Visites ← Visites + 1
-        <b>Pour</b> tous voisins ∈ V: x → y
+        <b>Pour</b> tout voisins ∈ V: x → y
             visiter(y)
     
     visiter(u)
