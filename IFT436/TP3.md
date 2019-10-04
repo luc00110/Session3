@@ -104,31 +104,31 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 **Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale u tel que u appartien à **V** et le sommet **v** tel que **v** appartiens a **V** et que **v** est le bassin final. <br>
 **Resultat:** Une sequence **S** de bassins, de temps maximal dans le manège, considérant que l'utilisateur peut remonter au bassin initial un maximum de 5 fois. <br>
 
-    S ← []
-    Ascensions ← 5 
-    Ttot ← 0
-    Parent ← u
-    parcours(x):   
-        SPrime ← S
-        Temps ← Ttot
-        si x n'est pas marqué alors
-            Temps ← Temps + c[Parent, x]
-            marquer x
-            ajouter x à SPrime
-            si Temps > Ttot alors
-                Ttot = Temps
-                S ← SPrime
-            si x DOIT se rendre à v ET que Ascension != 0 alors
-                Ascensions ← Ascension - 1
-                retirer les marqueurs
-                Parent ← S[0]
-                parcours(S[0]) // neoud
-            Sinon 
-                pour u appartiens a V: x → y
-                    Parent ← x
-                    parcours(y)
-    parcours(u)
-    retourner S
+    <i>S</i> ← []
+    <i>Ascensions</i> ← 5 
+    <i>Ttot</i> ← 0
+    <i>Parent</i> ← <i>u</i>
+    parcours(<i>x</i>):   
+        <i>SPrime</i> ← <i>S</i>
+        <i>Temps</i> ← <i>Ttot</i>
+        <b>Si</b> <i>x</i> non marqué <b>alors</b>
+            <i>Temps</i> ← <i>Temps</i> + c[<i>Parent</i>, <i>x</i>]
+            <b>marquer</b> <i>x</i>
+            <b>Ajouter</b> <i>x</i> à <i>SPrime</i>
+            <b>Si</b> <i>Temps</i> > <i>Ttot</i> <b>alors</b>
+                <i>Ttot</i> = <i>Temps</i>
+                <i>S</i> ← <i>SPrime</i>
+            <b>Si</b> <i>x</i> DOIT se rendre à <i>v</i> ET que <i>Ascension</i> != 0 <b>alors</b>
+                <i>Ascensions</i> ← <i>Ascensions</i> - 1
+                <b>retirer</b> marqueurs // Reverifier...
+                <i>Parent</i> ← <i>S</i>[0]
+                parcours(<i>S</i>[0]) // neoud
+            <b>Sinon</b> 
+                <b>Pour</b> <i>u</i> ∈ <i>V</i>: <i>x</i> → <i>y</i>
+                    <i>Parent</i> ← <i>x</i>
+                    parcours(<i>y</i>)
+    parcours(<i>u</i>)
+    <b>Retourner</b> <i>S</i>
 
 
 Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsqu'il se rendra au plus long parcours précédent le bassin final, et se 5 fois. La 5<sup>e</sup> fois, le sera possiblement différent mais restera cependant couvers par l'algorithme.
@@ -148,21 +148,21 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
 <pre><code>
     mode ← [], modeQty ← 0
     trouverMode(x)
-        **Si** |x| = 0 **alors** retourner mode
-        **Sinon**
+        <b>Si</b> |x| = 0 **alors</b> retourner mode
+        **Sinon</b>
             pivot ← mediane(x)
 
             gauche ← [x ∈ S: x < picot]
             centre ← [x ∈ S: x = pivot]
             droite ← [x ∈ S: x > pivot]
 
-            <b>Si</b> |centre| = modeQty **alors**
-                **Ajouter** pivot à mode
-            **Si** |centre| > modeQty **alors**
+            <b>Si</b> |centre| = modeQty <b>lors</b>
+                <b>Ajouter</b> pivot à mode
+            <b>Si</b> |centre| > modeQty <b>alors</b>
                 modeQty ← |centre|
                 mode ← pivot
                 /// Juste la ligne 'mode ← pivot' fait exactement ca, ca le réassigne
-            **Sinon**
+            <b>Sinon</b>
                 trouverMode(gauche)
                 trouverMode(droite)
     retourner trouverMode(S)
