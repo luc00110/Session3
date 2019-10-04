@@ -142,28 +142,31 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
 
 <h4 name="2-a">a)</h4>
 
-**Entrees:** Une séquence **S** non vide d'éléments combarables. <br>
+**Entrees:** Une séquence **S** non vide d'éléments comparables. <br>
 **Resultat:** La/les valeurs modales m trouvées dans la séquence **S**. <br>
 
-    pivot, mode ← [], modeQuant ← 0
-    trouverMode(s)
-        Si |S| == 0 alors
-            retourner mode
-        Sinon
-            pivot ← mediane(S) /// n'est pas une fonction
+<pre><code>
+    mode ← [], modeQty ← 0
+    trouverMode(x)
+        **Si** |x| = 0 **alors** retourner mode
+        **Sinon**
+            pivot ← mediane(x)
 
-            gauche ← [x dans S: x < picot]
-            centre ← [x dans S: x = pivot]
-            droite ← [s dans S: x > pivot]
+            gauche ← [x ∈ S: x < picot]
+            centre ← [x ∈ S: x = pivot]
+            droite ← [x ∈ S: x > pivot]
 
-            si |centre| == modeValue /// D'ou ca sort
-                mode ← S[centre] /// qu'est-ce que ca veut dire, ce n'Est pas du pseudo code.
-            si |centre| > modeQty ///  Je vois ce que tu voulais faire mais jamais n'est-il incrémenté.
-                modeValue ← |centre|
-                mode ← []
-                mode S[centre]
-        retourner trouverMode(gauche) + milieu + trouverMode(droite)
-    retourner trouverMode(???) /// La recursion devrait être applée ici
+            <b>Si</b> |centre| = modeQty **alors**
+                **Ajouter** pivot à mode
+            **Si** |centre| > modeQty **alors**
+                modeQty ← |centre|
+                mode ← pivot
+                /// Juste la ligne 'mode ← pivot' fait exactement ca, ca le réassigne
+            **Sinon**
+                trouverMode(gauche)
+                trouverMode(droite)
+    retourner trouverMode(S)
+</code></pre>
     
 <br>
 
