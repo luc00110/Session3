@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1570395310 "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.tex" "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.pdf" "TP3" 1570395314
+["pdflatex"] 1570397331 "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.tex" "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.pdf" "TP3" 1570397335
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/courier/pcrr8t.tfm" 1136768653 1384 4632f5e54900a7dadbb83f555bc61e56 ""
@@ -219,15 +219,15 @@
   "C:/Program Files/MiKTeX 2.9/tex/plain/ifetex/ifetex.tex" 1522518175 1178 13842cd1b714a921af7920503db5625a ""
   "C:/Users/Lucien/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1570307475 4228484 2b2a36cda1fce5b6f440a0e8a30abcdf ""
   "C:/Users/Lucien/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1570314650 3282631 6d4bfdf7b70d4784d8308781256d7348 ""
-  "TP3.aux" 1570395314 2010 6303788972b66e440619175c9668b647 "pdflatex"
-  "TP3.out" 1570395314 356 25d3ebc192539162568e9f8a1f86ffa7 "pdflatex"
-  "TP3.tex" 1570395305 7269 570dab971b4eadabff3e527ba3a591b0 ""
-  "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.aux" 1570395314 2010 6303788972b66e440619175c9668b647 ""
-  "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.tex" 1570395305 7269 570dab971b4eadabff3e527ba3a591b0 ""
+  "TP3.aux" 1570397334 2779 002ad0765e5067a9d47863a10bcb9d0b "pdflatex"
+  "TP3.out" 1570397334 509 4a11b9223232b36e617377662dc1da48 "pdflatex"
+  "TP3.tex" 1570397330 9465 6d6d03d9c0623ba7e084855496abd15a ""
+  "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.aux" 1570397334 2779 002ad0765e5067a9d47863a10bcb9d0b ""
+  "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.tex" 1570397330 9465 6d6d03d9c0623ba7e084855496abd15a ""
   (generated)
-  "TP3.out"
   "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.log"
-  "TP3.aux"
+  "TP3.out"
   "c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.pdf"
   "TP3.pdf"
   "TP3.log"
+  "TP3.aux"

@@ -116,7 +116,7 @@ bookmarks=true,bookmarksopenlevel=2]{hyperref}
 \vspace{2.5cm}
 
 {
-BLAIS REGOUT, Lucien\\[1em]
+BLAIS REGOUT, Lucien
 SAVOIE, Olivier
 }
 
@@ -129,7 +129,7 @@ Université de Sherbrooke
 
 \vspace{3.5cm}
 
-Présenté au/à?? Prof. BLONDIN, Michael
+Présenté à Pr BLONDIN, Michael
 
 \vspace{\fill}
 
@@ -191,15 +191,15 @@ Jeudi, 10 octobre 2019
   \IncMargin{1em}
   \begin{algorithm}[H]
 
-    \caption{Calcul du temps maximal passé dans une attraction \G{}}
+    \caption{Calcul de la séquence qui possède un temps maximal passé dans une attraction \G{}}
     \DontPrintSemicolon
     \LinesNumbered
     \SetAlgoLined
     \SetKwProg{Def}{}{:}{}
     \SetKwFunction{Parcours}{parcours}
 
-    \KwIn{Manège $\G{}$ tel que $\G{} = (\V{},\E{})$ et sommet initiale $u$ tel que $u$ appartien à $\V{}$.}
-    \KwResult{Une sequence $S$ de bassins de temps maximal dans le manège \G{}.}
+    \KwIn{Manège $\G{}$ tel que $\G{} = (\V{},\E{})$ et sommet initial $u$ tel que $u$ appartien à $\V{}$.}
+    \KwResult{Une séquence $S$ de bassins de temps maximal dans le manège \G{}.}
     \BlankLine
     $S \leftarrow [ ]$\;
     $Ttot \leftarrow 0$\;
@@ -223,16 +223,89 @@ Jeudi, 10 octobre 2019
           \BlankLine
         }
 
-        \For{$u \in V: x \leftarrow y$}{
+        \For{$u \in \V{} : x \rightarrow y$}{
           $Parent \leftarrow x$\;
           \Parcours{$y$}
         }
       }
     }
-  \Parcours{$u$}
-  \BlankLine
-  \Return{$S$}
+    \Parcours{$u$}
+    \BlankLine
+    \Return{$S$}
   \end{algorithm}
   \DecMargin{1em}
+
+\section{g)}
+  \IncMargin{1em}
+  \begin{algorithm}[H]
+
+    \caption{Calcul de la séquence qui possède un temps maximal passé dans une attraction \G{}, donné $5$ remontées}
+    \DontPrintSemicolon
+    \LinesNumbered
+    \SetAlgoLined
+    \SetKwProg{Def}{}{:}{}
+    \SetKwFunction{Parcours}{parcours}
+
+    \KwIn{Manège \G{} tel que $\G{} = (\V{},\E{})$, que le sommet initial $u$ tel que $u \in \V{}$, que $v \in \V{}$, ainsi que $v$ est le bassin finale.}
+    \KwResult{Une séquence $S$ de bassins, de temps maximal dans le manège \G{}, considérant que l'utilisateur peut remonter au bassin initial un maximum de $5$ fois.}
+    \BlankLine
+    $S \leftarrow [ ]$\;
+    $Ttot \leftarrow 0$\;
+    $Parent \leftarrow u$\;
+    $Ascension \leftarrow 5$\;
+    \BlankLine
+
+    \Def{\Parcours($x$)}{
+      $SPrime \leftarrow S$\;
+      $Temps \leftarrow Ttot$\;
+      \BlankLine
+
+      \If{$x$ non marquée}{
+        $Temps \leftarrow Temps + c[Parent, x]$\;
+        \textbf{marquer} $x$\;
+        \textbf{ajouter} $x$ à $SPrime$\;
+        \BlankLine
+        
+        \If{$Temps > Ttot$}{
+          $Ttot \leftarrow Temps$\;
+          $S \leftarrow SPrime$\;
+          \BlankLine
+        }
+
+        \If{prochain voisin de $x = v$}{
+          $Ascension \leftarrow Acension - 1$\;
+          \textbf{retirer} les marqueurs\;
+          $Parent \leftarrow S[0]$\;
+          \Parcours{$Parent$}
+        }
+
+        \Else{
+          \For{$u \in \V{} : x \rightarrow y$}{
+            $Parent \leftarrow x$\;
+            \Parcours{$y$}
+          }
+        }
+
+        \For{$u \in \V{} : x \rightarrow y$}{
+          $Parent \leftarrow x$\;
+          \Parcours{$y$}
+        }
+      }
+    }
+    \Parcours{$u$}
+    \BlankLine
+    \Return{$S$}
+  \end{algorithm}
+  \DecMargin{1em}
+
+  \BlankLine
+
+  Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsqu'il se rendra au plus long parcours précédent le bassin final,
+  et se 5 fois. La 5e fois, le sera possiblement différent mais restera cependant couvers par l'algorithme.\\[1em]
+
+\chapter{Seconde Question}
+\section{a)}
+
+Im here..
 
 \end{document}
