@@ -5,6 +5,8 @@
 \usepackage[dvips]{graphicx}
 \usepackage{xcolor}
 \usepackage{times}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
 
 \usepackage[
 breaklinks=true,colorlinks=true,
@@ -12,7 +14,6 @@ breaklinks=true,colorlinks=true,
 linkcolor=black,urlcolor=black,citecolor=black,% PRINT
 bookmarks=true,bookmarksopenlevel=2]{hyperref}
 
-\usepackage{geometry}
 
 \geometry{
   left=25mm,
@@ -21,6 +22,14 @@ bookmarks=true,bookmarksopenlevel=2]{hyperref}
   bottom=25mm,
   heightrounded,% better use it
 }
+
+%My nice quotation style
+\newtcolorbox{siderules}[1][]{blanker, breakable, 
+     left=6mm,right=0mm, top=1mm, bottom=1mm,
+     borderline west={1pt}{0pt}{black},
+     parbox=false, #1}
+
+
 
 \OnehalfSpacing
 %\linespread{1.3}
@@ -47,6 +56,12 @@ bookmarks=true,bookmarksopenlevel=2]{hyperref}
 \makeevenhead{plain}{}{}{}
 \makeoddhead{plain}{}{}{}
 
+%Define G
+\newcommand{\G}{\textbf{\textit{G}}}
+%Define V
+\newcommand{\V}{\textbf{\textit{V}}}
+%Define E
+\newcommand{\E}{\textbf{\textit{E}}}
 
 \maxsecnumdepth{subsection} % chapters, sections, and subsections are numbered
 \maxtocdepth{subsection} % chapters, sections, and subsections are in the Table of Contents
@@ -78,17 +93,8 @@ bookmarks=true,bookmarksopenlevel=2]{hyperref}
   }}
 \makeatother
 
-%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
-
 \begin{document}
 
-
-%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
-%   TITLEPAGE
-%
-%   due to variety of titlepage schemes it is probably better to make titlepage manually
-%
-%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
 \thispagestyle{empty}
 
 {%%%
@@ -118,7 +124,7 @@ Université de Sherbrooke
 
 \vspace{3.5cm}
 
-Présenté au Prof. BLONDIN, Michael
+Présenté au/à?? Prof. BLONDIN, Michael
 
 \vspace{\fill}
 
@@ -128,17 +134,22 @@ Jeudi, 10 octobre 2019
 }%%%
 \chapter{Première Question}
 \section{a)}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  \textbf{\textit{V}} = Les bassins du manège aquatique (sommets).
+  \textbf{\textit{E}} = Les corridors entre les bassins, potentiellement des glissades(arêtes).
+  \textbf{\textit{G}} = Manège aquatique, est dirigé, du à l'élevation.
+  Élévation dénoté de l'énoncé suivant:
+  \begin{siderules}
+    Puisque les bassins sont situés de plus en plus bas le long d'une colline, si on peut atteindre un bassin j à partir d'un bassin i, alors on ne peut pas atteindre le bassin i à partir du bassin j.
+  \end{siderules}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-\section{Second section}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\section{b)}
+  \textbf{\textit{G}} ne peut pas être un cycle dû contraintes fournis ci-dessous. Grâce à cette première contraites plus bas, il est impossible qu'un cycle soit établi avec un seul bassin considérant qu'il y a aucun corridor qui part d'un dit bassin en arrivant dans ce même bassin. Finalement, la seconde contrainte implique que dû à l'inclinaison, l'un ne peut pas revenir au bassin précédent. Cela implique qu'il y a aucun cycle possible et que de ce fait, le manège aquatique \G{} est acyclique et dirigé.
+  \begin{siderules}
+    Il n'y a \textit{pas} de corridor passant d'un bassin vers lui-même.
+  \end{siderules}
+  \begin{siderules}
+    Puisque les bassins sont situés de plus en plus bas, le long d'une colline, si on peut atteindre un bassin \textit{j} à partir d'un bassin \textit{i}, alors on ne peut pas atteindre le bassin \textit{i} à partir du bassin \textit{j}.
+  \end{siderules}
 
 \subsection{First subsection}
 
@@ -157,4 +168,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 \end{document}
-
