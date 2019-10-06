@@ -105,6 +105,7 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 <h4 name="1-g">g)</h4>
 
 **Entrees:** Manège **G** tel que  **G** = (**V**,**E**) et sommet initiale u tel que u appartien à **V** et le sommet **v** tel que **v** appartiens a **V** et que **v** est le bassin final. <br>
+
 **Resultat:** Une sequence **S** de bassins, de temps maximal dans le manège, considérant que l'utilisateur peut remonter au bassin initial un maximum de 5 fois. <br>
 <pre><code>
     S ← []
