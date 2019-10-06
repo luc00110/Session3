@@ -249,7 +249,7 @@ Jeudi, 10 octobre 2019
     \KwIn{Manège \G{} tel que $\G{} = (\V{},\E{})$, que le sommet initial $u$ tel que $u \in \V{}$, que $v \in \V{}$, ainsi que $v$ est le bassin finale.}
     \KwResult{Une séquence $S$ de bassins, de temps maximal dans le manège \G{}, considérant que l'utilisateur peut remonter au bassin initial un maximum de $5$ fois.}
     \BlankLine
-    $S \leftarrow [ ]$\;
+    $S \leftarrow [\ ]$\;
     $Ttot \leftarrow 0$\;
     $Parent \leftarrow u$\;
     $Ascension \leftarrow 5$\;
@@ -284,11 +284,6 @@ Jeudi, 10 octobre 2019
             $Parent \leftarrow x$\;
             \Parcours{$y$}
           }
-        }
-
-        \For{$u \in \V{} : x \rightarrow y$}{
-          $Parent \leftarrow x$\;
-          \Parcours{$y$}
         }
       }
     }
