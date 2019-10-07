@@ -383,6 +383,52 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
 
 \chapter{Question 3}
 \section{a)}
+
+\IncMargin{1em}
+\begin{algorithm}[H]
+
+  \caption{Détermination de la propriété d'arbre d'un graphe.}
+  \DontPrintSemicolon
+  \LinesNumbered
+  \SetAlgoLined
+  \SetKwFunction{Vis}{visiter}
+  \SetKwProg{Def}{}{:}{}
+
+  \KwIn{Un graph \G{} tel que $\G{}=(\V{},\E{})$ est non dirié et un sommet $u \in \V{}$}
+  \KwResult{Si le graphe est un arbre, ou non.}
+  \BlankLine
+  $Visites \leftarrow 0$\;
+
+  \Def{\Vis($x$)}{ %% RENDU ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+
+    \If{$|x|=0$}{
+      \Return{$mode$}
+      }
+    \Else{
+      $pivot \leftarrow$ \Med{$x$}\;
+      $gauche \leftarrow [x \in S: x < pivot]$\;
+      $centre \leftarrow [x \in S: x = pivot]$\;
+      $droite \leftarrow [x \in S: x > pivot]$\;
+      
+      \If{$|centre|=modeQty$}{
+        \textbf{ajouter} $pivot$ à $mode$\;
+      }
+      
+      \If{$|centre|>modeQty$}{
+        $modeQty \leftarrow |centre|$\;
+        $mode \leftarrow [pivot]$
+      }
+
+      \Else{
+        \TMode{$gauche$}\;
+        \TMode{$droite$}
+      }
+    }
+  }
+  \Return{\TMode{$S$}}  
+\end{algorithm}
+\DecMargin{1em}
+
 \section{b)}
 \section{c)}
 %%%% BLEU COMME DANS SON DOCUMENT
