@@ -11,7 +11,7 @@
 \usepackage{geometry}
 \usepackage{amsmath}
 \usepackage[french, onelanguage, noend, ruled, vlined]{algorithm2e}
-
+\usepackage{qtree}
 
 \usepackage[
 breaklinks=true,colorlinks=true,
@@ -116,7 +116,7 @@ bookmarks=true,bookmarksopenlevel=2]{hyperref}
 \vspace{2.5cm}
 
 {
-BLAIS REGOUT, Lucien
+BLAIS REGOUT, Lucien\\
 SAVOIE, Olivier
 }
 
@@ -301,6 +301,51 @@ Jeudi, 10 octobre 2019
 \chapter{Seconde Question}
 \section{a)}
 
-Im here..
+To be completed
+
+\section{b)}
+
+%\Tree [.{$[10, 20, 20, 20, 10, 30, 70, 20, 80, 30, 60, 40, 20, 10, 50, 10, 70, 80]$} deeecent noice ]
+
+\small
+
+\Tree
+[.{$[10, 20, 20, 20, 10, 30, 70, 20, 80, 30, 60, 40, 20, 10, 50, 10, 70, 80]$}
+  [.{$[ ][10, 10, 10, 10][ ]$}
+   {$[ ][ ][ ]$}
+   {$[ ]$}
+   {$[][][]$}
+  ] 
+  {$[20, 20, 20, 20, 20]$}
+  [.{$[30, 70, 80, 30, 60, 40, 50, 70, 80]$}
+    [.{$[30, 30, 40, 50]$}
+      [.{$[][30, 30][40, 50]$}
+        {$[][][]$}
+        {$[]$}
+        [.{$[][40][50]$}
+          {$[][][]$}
+          {$[]$}
+          [.{$[][50][]$}
+            {$[][][]$}
+            {$[]$}
+            {$[][][]$}
+          ]
+        ]
+      ]
+    ]
+    {$[60]$}
+    [.{$[70, 80, 70, 80]$}
+      [.{$[][70, 70][80, 80]$}
+        {$[][][]$}
+        {$[]$}
+        [.{$[][80,80][]]$}
+          {$[][][]$}
+          {$[]$}
+          {$[][][]$}
+        ]
+      ]
+    ]
+  ]
+]
 
 \end{document}

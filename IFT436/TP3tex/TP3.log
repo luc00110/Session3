@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.5)  6 OCT 2019 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.5)  7 OCT 2019 00:34
 entering extended mode
 **"c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.tex"
 ("c:/Users/Lucien/Documents/Devoirs/Session 3/Session3/IFT436/TP3tex/TP3.tex"
@@ -1011,6 +1011,128 @@ Package: relsize 2013/03/29 ver 4.1
 \c@algocf=\count369
 \algocf@algoframe=\box83
 \algocf@algobox=\box84
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/qtree\qtree.sty"
+Package: 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+Package: qtree 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+("C:\Program Files\MiKTeX 2.9\tex/latex/pict2e\pict2e.sty"
+Package: pict2e 2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/pict2e\pict2e.cfg"
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/pict2e\p2e-pdftex.def"
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks47
+\@arclen=\dimen328
+\@arcrad=\dimen329
+\@tempdimd=\dimen330
+)
+\c@treecount=\count370
+\c@branchcount=\count371
+\parentbox=\box85
+\treebox=\box86
+\treeboxone=\box87
+\treeboxtwo=\box88
+\treeboxthree=\box89
+\treeboxfour=\box90
+\treeboxfive=\box91
+\treeboxsix=\box92
+\treeboxseven=\box93
+\treeboxeight=\box94
+\treeboxnine=\box95
+\treeboxten=\box96
+\treeboxeleven=\box97
+\treeboxtwelve=\box98
+\treeboxthirteen=\box99
+\treeboxfourteen=\box100
+\treeboxfifteen=\box101
+\treeboxsixteen=\box102
+\treeboxseventeen=\box103
+\treeboxeighteen=\box104
+\treeboxnineteen=\box105
+\treeboxtwenty=\box106
+\treeoffsetone=\skip275
+\treeoffsettwo=\skip276
+\treeoffsetthree=\skip277
+\treeoffsetfour=\skip278
+\treeoffsetfive=\skip279
+\treeoffsetsix=\skip280
+\treeoffsetseven=\skip281
+\treeoffseteight=\skip282
+\treeoffsetnine=\skip283
+\treeoffsetten=\skip284
+\treeoffseteleven=\skip285
+\treeoffsettwelve=\skip286
+\treeoffsetthirteen=\skip287
+\treeoffsetfourteen=\skip288
+\treeoffsetfifteen=\skip289
+\treeoffsetsixteen=\skip290
+\treeoffsetseventeen=\skip291
+\treeoffseteighteen=\skip292
+\treeoffsetnineteen=\skip293
+\treeoffsettwenty=\skip294
+\treeshiftone=\skip295
+\treeshifttwo=\skip296
+\treeshiftthree=\skip297
+\treeshiftfour=\skip298
+\treeshiftfive=\skip299
+\treeshiftsix=\skip300
+\treeshiftseven=\skip301
+\treeshifteight=\skip302
+\treeshiftnine=\skip303
+\treeshiftten=\skip304
+\treeshifteleven=\skip305
+\treeshifttwelve=\skip306
+\treeshiftthirteen=\skip307
+\treeshiftfourteen=\skip308
+\treeshiftfifteen=\skip309
+\treeshiftsixteen=\skip310
+\treeshiftseventeen=\skip311
+\treeshifteighteen=\skip312
+\treeshiftnineteen=\skip313
+\treeshifttwenty=\skip314
+\treewidthone=\skip315
+\treewidthtwo=\skip316
+\treewidththree=\skip317
+\treewidthfour=\skip318
+\treewidthfive=\skip319
+\treewidthsix=\skip320
+\treewidthseven=\skip321
+\treewidtheight=\skip322
+\treewidthnine=\skip323
+\treewidthten=\skip324
+\treewidtheleven=\skip325
+\treewidthtwelve=\skip326
+\treewidththirteen=\skip327
+\treewidthfourteen=\skip328
+\treewidthfifteen=\skip329
+\treewidthsixteen=\skip330
+\treewidthseventeen=\skip331
+\treewidtheighteen=\skip332
+\treewidthnineteen=\skip333
+\treewidthtwenty=\skip334
+\daughteroffsetone=\skip335
+\daughteroffsettwo=\skip336
+\daughteroffsetthree=\skip337
+\daughteroffsetfour=\skip338
+\branchwidthone=\skip339
+\branchwidthtwo=\skip340
+\branchwidththree=\skip341
+\branchwidthfour=\skip342
+\parentoffset=\skip343
+\treeoffset=\skip344
+\daughteroffset=\skip345
+\branchwidth=\skip346
+\parentwidth=\skip347
+\treewidth=\skip348
+\qta=\toks48
+\qtb=\toks49
+\nbranches=\count372
+\qroofx=\count373
+\qroofy=\count374
+\@qrscratchbox=\box107
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
  ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\hobsub-hyperref.sty"
@@ -1046,15 +1168,15 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen328
-\Hy@linkcounter=\count370
-\Hy@pagecounter=\count371
+\@linkdim=\dimen331
+\Hy@linkcounter=\count375
+\Hy@pagecounter=\count376
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count372
+\Hy@SavedSpaceFactor=\count377
  ("C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -1068,16 +1190,16 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count373
+\c@Hy@tempcnt=\count378
  ("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
-\XeTeXLinkMargin=\dimen329
-\Fld@menulength=\count374
-\Field@Width=\dimen330
-\Fld@charsize=\dimen331
+\XeTeXLinkMargin=\dimen332
+\Fld@menulength=\count379
+\Field@Width=\dimen333
+\Fld@charsize=\dimen334
 Package hyperref Info: Hyper figures OFF on input line 6380.
 Package hyperref Info: Link nesting OFF on input line 6385.
 Package hyperref Info: Hyper index ON on input line 6388.
@@ -1087,24 +1209,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
 LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count375
-\c@Item=\count376
-\c@Hfootnote=\count377
+\Hy@abspage=\count380
+\c@Item=\count381
+\c@Hfootnote=\count382
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/memoir\memhfixc.sty"
 Package: memhfixc 2013/05/30 v1.17 nameref/hyperref package fixes for memoir class
-\c@memhycontfloat=\count378
-\c@Hpagenote=\count379
+\c@memhycontfloat=\count383
+\c@Hpagenote=\count384
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count380
-\c@bookmark@seq@number=\count381
+\Fld@listcount=\count385
+\c@bookmark@seq@number=\count386
  ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
-\Hy@SectionHShift=\skip275
+\Hy@SectionHShift=\skip349
 ) ("c:/Users\Lucien\Documents\Devoirs\Session 3\Session3\IFT436\TP3tex\TP3.aux")
 \openout1 = `TP3.aux'.
 
@@ -1146,17 +1268,17 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count382
-\scratchdimen=\dimen332
-\scratchbox=\box85
-\nofMPsegments=\count383
-\nofMParguments=\count384
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count385
-\MPscratchDim=\dimen333
-\MPnumerator=\count386
-\makeMPintoPDFobject=\count387
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count387
+\scratchdimen=\dimen335
+\scratchbox=\box108
+\nofMPsegments=\count388
+\nofMParguments=\count389
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count390
+\MPscratchDim=\dimen336
+\MPnumerator=\count391
+\makeMPintoPDFobject=\count392
+\everyMPtoPDFconversion=\toks51
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
@@ -1167,7 +1289,7 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 ) ABD: EveryShipout initializing macros
-\c@lstlisting=\count388
+\c@lstlisting=\count393
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1203,14 +1325,14 @@ Package grfext Info: Graphics extension search list:
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box86
+\AtBeginShipoutBox=\box109
 Package hyperref Info: Link coloring ON on input line 101.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count389
+\c@section@level=\count394
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1263,29 +1385,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--300
 
  []
 
-[5] [6
+[5]
+Overfull \hbox (427.42429pt too wide) in paragraph at lines 312--350
+[] [] 
+ []
+
+[6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 306.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 306.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
  ("c:/Users\Lucien\Documents\Devoirs\Session 3\Session3\IFT436\TP3tex\TP3.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 306.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 306.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
 Package rerunfilecheck Info: File `TP3.out' has not changed.
-(rerunfilecheck)             Checksum: 605989EA59284ABB1F9328A45855C09E;509.
+(rerunfilecheck)             Checksum: 29C9FBBE26DDF8079B825EEFCEE6369D;560.
  ) 
 Here is how much of TeX's memory you used:
- 39877 strings out of 492942
- 764687 string characters out of 3135494
- 936882 words of memory out of 3000000
- 43167 multiletter control sequences out of 15000+200000
- 577987 words of font info for 94 fonts, out of 3000000 for 9000
+ 40243 strings out of 492942
+ 769591 string characters out of 3135494
+ 960404 words of memory out of 3000000
+ 43515 multiletter control sequences out of 15000+200000
+ 580213 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,21n,101p,896b,933s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\Lucien\Documents\Devoirs\Session 3\Session3\IFT436\TP3tex\TP3.pdf" (6 pages, 157397 bytes).
+Output written on "c:/Users\Lucien\Documents\Devoirs\Session 3\Session3\IFT436\TP3tex\TP3.pdf" (6 pages, 159628 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 19693 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 23285 words of extra memory for PDF output out of 24883 (max. 10000000)
 
