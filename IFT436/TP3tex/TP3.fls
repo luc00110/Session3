@@ -269,6 +269,18 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\tikz-qtree\pgftree.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\tikz-qtree\pgftree.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\tikz-qtree\tikz-qtree.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\tikz-qtree\tikz-qtree.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\fontawesome.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\fontawesome.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\fontawesomesymbols-generic.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\fontawesomesymbols-generic.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\fontawesomesymbols-pdftex.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\fontawesomesymbols-pdftex.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryautomata.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryautomata.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.multipart.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.multipart.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes.multipart.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes.multipart.code.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
@@ -333,6 +345,7 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmri8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
@@ -352,7 +365,6 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmbi8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmbi8t.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmri8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\adobe\helvetic\phvb8t.vf
@@ -372,10 +384,17 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\adobe\courier\pcrr8t.vf
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrr8r.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\ufontawesometwo.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\ufontawesometwo.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\fontawesome\FontAwesome--fontawesometwo.tfm
 INPUT c:\Users\Lucien\Documents\Devoirs\Session 3\Session3\IFT436\TP3tex\TP3.aux
 INPUT c:\Users\Lucien\Documents\Devoirs\Session 3\Session3\IFT436\TP3tex\TP3.out
 INPUT c:\Users\Lucien\Documents\Devoirs\Session 3\Session3\IFT436\TP3tex\TP3.out
+INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\fontawesome\fontawesometwo.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\base\8r.enc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\fontawesome\FontAwesome.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\fontawesome\FontAwesome.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
