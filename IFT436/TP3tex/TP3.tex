@@ -71,9 +71,9 @@ bookmarks=true,bookmarksopenlevel=2]{hyperref}
 %Define G
 \newcommand{\G}{$\mathbfcal{G}$}
 %Define V
-\newcommand{\V}{$\textbf{\textit{V}}$}
+\newcommand{\V}{$\textit{V}$}
 %Define E
-\newcommand{\E}{$\textbf{\textit{E}}$}
+\newcommand{\E}{$\textit{E}$}
 
 \maxsecnumdepth{subsection} % chapters, sections, and subsections are numbered
 \maxtocdepth{subsection} % chapters, sections, and subsections are in the Table of Contents
@@ -173,13 +173,10 @@ Jeudi, 10 octobre 2019
 \section{c)}
 Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'arêtes qui rendrait \G{} cyclique et pour lesquels $|\E{}| > |\V{}| - 1$. Ainsi, dans la majorité des cas, \G{} n'est pas un arbre, car il ne respecte pas les propriétés essentielles pour en être un. Toutefois, il y a toujours la possibilité qu'aucun cycle, simple ou non, ne s'y retrouve et que le nombre d'arête soit équivalent au nombre de sommet $- 1$. De sorte que les propriétés suivantes soit respectées.\\
   \begin{itemize}
-    \item\G{} est $connexe$ et $|\textbf{E}| = |\textbf{V}| - 1$
+    \item\G{} est $connexe$ et $|\textit{E}| = |\textit{V}| - 1$
   \end{itemize} 
 
 \section{d)}
-
-
-
   \begin{gather*}
     min = n-1,\quad \forall n \geq 1\quad
   \end{gather*}
@@ -199,7 +196,7 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \IncMargin{1em}
   \begin{algorithm}[H]
 
-    \caption{Calcul de la séquence qui possède un temps maximal passé dans une attraction \G{}}
+    \caption{Calcul de la séquence au temps maximal passé dans une attraction \G{}}
     \DontPrintSemicolon
     \LinesNumbered
     \SetAlgoLined
@@ -237,11 +234,17 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \end{algorithm}
   \DecMargin{1em}
 
+  \BlankLine
+
+  Grâce aux marqueurs, l'algorithmes ne visite qu les éléments qui ne furent pas précédement visités.
+  De plus, ce dernier se rappelle récursivement sur chacun des enfants soudjacents.
+  Ainsi, l'on peut en déduire que son temps d'exécution sera, dans le pire cas, $\mathcal{O}(|\E{}| + |\V{}|)$ ce qui respecte la contrainte de $\mathcal{O}(n + m)$.
+
 \section{g)}
   \IncMargin{1em}
   \begin{algorithm}[H]
 
-    \caption{Calcul de la séquence qui possède un temps maximal passé dans une attraction \G{}, donné $5$ remontées}
+    \caption{Calcul de la séquence au temps maximal passé dans une attraction \G{}, donné $5$ remontées}
     \DontPrintSemicolon
     \LinesNumbered
     \SetAlgoLined
@@ -431,6 +434,8 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
 \end{algorithm}
 \DecMargin{1em}
 
+\BlankLine
+
 Cet algorithme parcours le graph au complet. Si un sommet est visité plus d'une fois, c'est cyclique. Cela est uniquement véridicte lorsqu'on empêche de visiter le noeud précédents en visitant tous les voisins immédiats.\\
 
 Deplus, tous les sommets peuvent être visiter moins de deux fois et tout de même il pourrait y manquer certains sommets, d'ou la vérification si le nombre de visites est bien égale a la somme des sommets dans le graphes!
@@ -514,7 +519,7 @@ Assumant qu'il y a $1$ unité ($u$) de distance entre les coins, du carré form�
   \node[state] [right of=0] (1) {};
   \node[state] [below of=0] (2) {};
   \node[state] [below of=1] (3) {};
-  \node[text width=4cm, anchor=west, right, align=center] at (4, -1){$4(\frac{1}{3})(1^2 + 1^2)=2^{1/2}=2.8284\dots u$};
+  \node[text width=4cm, anchor=west, right, align=center] at (4, -1){$4(\frac{1}{2})(1^2 + 1^2)=2^{\frac{1}{2}}=2.8284\dots u$};
 
   %% Arêtes
   \path[-, gray]
