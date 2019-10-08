@@ -10,11 +10,15 @@
 \usepackage[most]{tcolorbox}
 \usepackage{geometry}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[french, onelanguage, noend, ruled, vlined]{algorithm2e}
 \usepackage{tikz-qtree}
 \usepackage{fontawesome}
 \usepackage{tikz}
 \usetikzlibrary{automata}
+
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+%usage : \mathcal{} et \mathbfcal{} for bold
 
 \usepackage[
 breaklinks=true,colorlinks=true,
@@ -65,7 +69,7 @@ bookmarks=true,bookmarksopenlevel=2]{hyperref}
 \makeoddhead{plain}{}{}{}
 
 %Define G
-\newcommand{\G}{$\textbf{\textit{G}}$}
+\newcommand{\G}{$\mathbfcal{G}$}
 %Define V
 \newcommand{\V}{$\textbf{\textit{V}}$}
 %Define E
@@ -143,13 +147,13 @@ Jeudi, 10 octobre 2019
 \chapter{Question 1}
 \section{a)}
   \noindent
-  \textbf{\textit{V}} = Les bassins du manège aquatique (sommets).\\[1em]
-  \textbf{\textit{E}} = Les corridors entre les bassins, potentiellement des glissades(arêtes).\\[1em]
-  \textbf{\textit{G}} = Manège aquatique est dirigé.
+  $\V{}$ = Les bassins du manège aquatique (sommets).\\[1em]
+  \E{} = Les corridors entre les bassins, potentiellement des glissades(arêtes).\\[1em]
+  \G{} = Manège aquatique est dirigé.
 
 
 \section{b)}
-  \textbf{\textit{G}} ne peut pas être un cycle dû aux contraintes stipulées. Cette contrainte, ci-dessous, en témoigne.\\
+  \G{} ne peut pas être un cycle dû aux contraintes stipulées. Cette contrainte, ci-dessous, en témoigne.\\
 
   \begin{siderules}
     Il n'y a \textit{pas} de corridor passant d'un bassin vers lui-même.
@@ -169,7 +173,7 @@ Jeudi, 10 octobre 2019
 \section{c)}
 Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'arêtes qui rendrait \G{} cyclique et pour lesquels $|\E{}| > |\V{}| - 1$. Ainsi, dans la majorité des cas, \G{} n'est pas un arbre, car il ne respecte pas les propriétés essentielles pour en être un. Toutefois, il y a toujours la possibilité qu'aucun cycle, simple ou non, ne s'y retrouve et que le nombre d'arête soit équivalent au nombre de sommet $- 1$. De sorte que les propriétés suivantes soit respectées.\\
   \begin{itemize}
-    \item\G{} est $connexe$ et $\textbf{E}| = |\textbf{V}| - 1$
+    \item\G{} est $connexe$ et $|\textbf{E}| = |\textbf{V}| - 1$
   \end{itemize} 
 
 \section{d)}
@@ -186,6 +190,7 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   Advennant que chacun des bassins présents se voient attribués un corridor vers chacun des bassins soudjacents, l'équation maximal reflètera la composition du chemin le plus long. 
 
 \section{e)}
+  \noindent
   \textbf{Bassin départ :} De toutes les paires de sommets composants les arêtes, le sommet qui se retrouvera uniquement en index $0$ de la paire, à la gauche, qui est donc toujours le sommet de départ, sera donc considéré comme sommet de départ.\\[1em]
   \textbf{Bassin d'arrivée :} Suivre le même résonnement, mais pour le sommet qui se retrouve toujours en index $1$ de la paire et qui est donc toujours le bassin d'arrivée dans toutes les paires, sera donc considéré comme sommet d'arrivée.
 
@@ -201,7 +206,7 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
     \SetKwProg{Def}{}{:}{}
     \SetKwFunction{Parcours}{parcours}
 
-    \KwIn{Manège $\G{}$ tel que $\G{} = (\V{},\E{})$ et sommet initial $u$ tel que $u$ appartien à $\V{}$.}
+    \KwIn{Manège \G{} tel que \G{}$ = (\V{},\E{})$ et sommet initial $u$ tel que $u$ appartien à $\V{}$.}
     \KwResult{Une séquence $S$ de bassins de temps maximal dans le manège \G{}.}
     $S \leftarrow [ ]$\;
     $Ttot \leftarrow 0$\;
@@ -243,7 +248,7 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
     \SetKwProg{Def}{}{:}{}
     \SetKwFunction{Parcours}{parcours}
 
-    \KwIn{Manège \G{} tel que $\G{} = (\V{},\E{})$, que le sommet initial $u$ tel que $u \in \V{}$, que $v \in \V{}$, ainsi que $v$ est le bassin finale.}
+    \KwIn{Manège \G{} tel que \G{}$ = (\V{},\E{})$, que le sommet initial $u$ tel que $u \in \V{}$, que $v \in \V{}$, ainsi que $v$ est le bassin finale.}
     \KwResult{Une séquence $S$ de bassins, de temps maximal dans le manège \G{}, considérant que l'utilisateur peut remonter au bassin initial un maximum de $5$ fois.}
     $S \leftarrow [\ ]$\;
     $Ttot \leftarrow 0$\;
@@ -384,6 +389,12 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
 \chapter{Question 3}
 \section{a)}
 
+\noindent
+\begin{siderules}
+  \textbf{Donnez un algorithme qui détermine si un graphe non dirigé est un arbre.}
+\end{siderules}
+\BlankLine
+
 \IncMargin{1em}
 \begin{algorithm}[H]
 
@@ -394,45 +405,63 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \SetKwFunction{Vis}{visiter}
   \SetKwProg{Def}{}{:}{}
 
-  \KwIn{Un graph \G{} tel que $\G{}=(\V{},\E{})$ est non dirié et un sommet $u \in \V{}$}
+  \KwIn{Un graph \G{} tel que \G{}$=(\V{},\E{})$ est non dirié et un sommet $u \in \V{}$}
   \KwResult{Si le graphe est un arbre, ou non.}
   \BlankLine
   $Visites \leftarrow 0$\;
 
-  \Def{\Vis($x$)}{ %% RENDU ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+  \Def{\Vis{$x$}}{
 
-    \If{$|x|=0$}{
-      \Return{$mode$}
-      }
-    \Else{
-      $pivot \leftarrow$ \Med{$x$}\;
-      $gauche \leftarrow [x \in S: x < pivot]$\;
-      $centre \leftarrow [x \in S: x = pivot]$\;
-      $droite \leftarrow [x \in S: x > pivot]$\;
-      
-      \If{$|centre|=modeQty$}{
-        \textbf{ajouter} $pivot$ à $mode$\;
-      }
-      
-      \If{$|centre|>modeQty$}{
-        $modeQty \leftarrow |centre|$\;
-        $mode \leftarrow [pivot]$
-      }
-
-      \Else{
-        \TMode{$gauche$}\;
-        \TMode{$droite$}
-      }
+    \If{$x$ est marqué}{
+      \Return{$Non\_Arbre$}
+    }
+    \textbf{marquer} $x$\;
+    $Visites \leftarrow Visites + 1$\;
+    \ForAll{voisins de $x \in \V{} : x \rightarrow y$}{
+      \Vis{$y$}\;
     }
   }
-  \Return{\TMode{$S$}}  
+  \Vis{$u$}\;
+  \If{$Visites \neq ||$}{
+    \Return{$Non\_Arbre$}
+  }
+  \Else{
+    \Return{$Est\_Arbre$}
+  }
 \end{algorithm}
 \DecMargin{1em}
 
+Cet algorithme parcours le graph au complet. Si un sommet est visité plus d'une fois, c'est cyclique. Cela est uniquement véridicte lorsqu'on empêche de visiter le noeud précédents en visitant tous les voisins immédiats.\\
+
+Deplus, tous les sommets peuvent être visiter moins de deux fois et tout de même il pourrait y manquer certains sommets, d'ou la vérification si le nombre de visites est bien égale a la somme des sommets dans le graphes!
+
 \section{b)}
+
+\noindent
+\begin{siderules}
+  \textbf{Démontrez que le graphe complet \G{}$_n$ possède au moins $2^n$ arbres couvrants, $\forall n \in \mathbb{N} > 3$ .}
+\end{siderules}
+
+Une façon compréhensive de le démontrer est de représenter chacun des sommets comme une valeurs binaire.
+Lors d'un compte binaire (\textit{ie}: l'évaluation de $101_2$ qui donne $5$) on réalise qu'il y a jusqu'a $8$ manières différentes d'agencer $3$ valeurs, $3$ sommets.
+Maintenant, si nous retrouvons $4$ somets, il y a alors $4$ valeurs qui peuvent être agencer jusqu'a $16$ façons uniques. 
+Ceci, qui suit cette même relation binaire, gradue en fonction du nombre d'objet à relier par le l'arbre couvrant $\mathbfcal{H}$ du graphe complet, acyclique et non dirigé \G{}.\\
+
+Ainsi, avec $n$ sommets, il y a $2^n$ manières de les agencer afin de couvrir tout les sommets et d'accomplir la tâche requise!
+
+
+
 \section{c)}
+
+\noindent
+\begin{siderules}
+  \textbf{Donnez un exemple de points où un arbre couvrant minimal entre ces points est plus long qu'un arbre couvrant minimal avec un nouveau point ajouté (une halte).}
+\end{siderules}
+
+\begin{figure}[!h]
+  \centering
 %%%% BLEU COMME DANS SON DOCUMENT
-\begin{tikzpicture}[node distance=2cm]
+\begin{tikzpicture}[node distance=2cm, baseline=0]
   %$ Sommets
   \tikzset{every state/.style={minimum size=10pt, inner sep=0pt, white}}
 
@@ -440,6 +469,7 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \node[state] [right of=0] (1) {};
   \node[state] [below of=0] (2) {};
   \node[state] [below of=1] (3) {};
+  \node[text width=4cm, anchor=west, right, align=center] at (4, -1){$3 * 1 = 3 u$};
 
   %% Arêtes
   \path[-, gray]
@@ -466,9 +496,15 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \node[yshift=  0pt] at (2) {\faHome};
   \node[yshift=  0pt] at (3) {\faHome};
 \end{tikzpicture}
+\end{figure}
 
+Dans cette image, on retrouve un arbre couvrant minimal qui couvre $4$ sommets d'un graph \G{} à $4$ sommets.
+Assumant qu'il y a $1$ unité ($u$) de distance entre les coins, du carré formé, adjacants, le graph aurait une longueur suivant l'équation ci-dessus.
 
+\BlankLine
 
+\begin{figure}[!h]
+  \centering
 %%%% ROUUUUUGE
 \begin{tikzpicture}[node distance=2cm]
   %$ Sommets
@@ -478,6 +514,7 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \node[state] [right of=0] (1) {};
   \node[state] [below of=0] (2) {};
   \node[state] [below of=1] (3) {};
+  \node[text width=4cm, anchor=west, right, align=center] at (4, -1){$4(\frac{1}{3})(1^2 + 1^2)=2^{1/2}=2.8284\dots u$};
 
   %% Arêtes
   \path[-, gray]
@@ -503,5 +540,8 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \node[yshift=  0pt] at (2) {\faHome};
   \node[yshift=  0pt] at (3) {\faHome};
 \end{tikzpicture}
+\end{figure}
+
+Maintenant, ces gites sont équidistant de cette halte, sont à la même position que le graphe précédent et la distance totale de chacun des gites à la halte va comme suit.
 
 \end{document}

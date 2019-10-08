@@ -12,7 +12,8 @@
 |:-|:-|:-|:-|:-|:-|:-|
 |[Contigu](#Contigu)|Pos. début<br>Taille <br> **O(1)**|Début + Déplacement **O(1)**|[Externe](#Externe)|Liste espaces libres [Position,Taille] triée par grandeur|<ul><li>**O(1)** Si espace libre contigu<li>**O(n)** Si un trou libre assez grand existe<li>**O(Taille Disque)** Si fragment</ul>|Copies de sûretées|
 |[Liste chainée](#Liste-chainée)|<ul><li>Numéro bloc départ <li> Taille (n) <li> Un numéro bloc suivant par bloc (n/taille bloc) <li> position dernier bloc <li> **O(n)**</ul>| <ul><li>Nb de blocs <li>**O(n/2)** <li>Si fin fichier, **O(1)**</ul>|[Interne](#Interne)|<ol><li>Liste chaînée<li>Liste chaînée d'index<li>Bitmap</ol>|**O(1)** Ajuster un bloc a la fin de la chaîne|<ul><li>Chainage vulnerable<ul><li>Chainage double </ul></ul>|
-|[Index](#Index)|||||||
+|[Index](#Index)|<ul><li>Un no de bloc par bloc<li><b>O(n)</b><li>+ Un no de bloc par bloc d'index<li><b>O(Log(n))</b></ul>|O(Log<sub>TI</sub>N)<br>O(nombre de niveau d'index)|O(Log<sub>TI</sub>N)|Interne<br>Également dans les blocs d'index|<ul><li>Index<li>Bitmap</ul>|Bloc d'index vulnérables ?Autres? Chainage entre les blocs|
+|[Fichier Image](#Fichier-Image)|un numero de bloc par bloc|<ul><li><b>O(n)</b> acces RAM <li><b>O(1)</b> acces disque</ul>|**O(1)**|Interne|Fichier Image|Fichier Image vulnerable<br>2 copies du fichier image|
 
 ---
 ### Arbres cycliques et acycliques. (À completer)
@@ -131,16 +132,19 @@ Si la taille est plus grande qu'un petit bloc, assigner un gros bloc.
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 
 
-    TB == Taille de bloc
-    TI == Taille Index
-    N == Nombre de blocs
-    TF == Taille Fichier
+TB == Taille de bloc
+TI == Taille Index
+N == Nombre de blocs
+TF == Taille Fichier
 
-    N = N/TB
-    TI = 4
-    N/TI = Bloc d'Index
+N = N/TB
+TI = 4
+N/TI = Bloc d'Index
 
-    Complexité = O((N/TB)/TI)
+Complexité = O((N/TB)/TI)
+
+
+
 
 Exemple, avec un fichier de 1Go, puis des blocs de 1ko:
 
@@ -152,3 +156,64 @@ Exemple, avec un fichier de 1Go, puis des blocs de 1ko:
     -> 2^18 / 2^10 = 2^8
 
 Retour au [Tableau résumé](#Tableau-Résumé)
+
+### Index
+ - Taille d'un bloc (TB)
+ - Taille d'un numéro de bloc {TNB
+ - Taille d'index = TB/TNB}
+
+Si un seul niveau d'index, alors taille max = TI*TB
+
+Ces exemples n'ont qu'un de 
+>Ex. 1: 
+128o = 2<sup>7</sup>
+32bits = 2<sup>2</sup>
+2<sup>7</sup> / 2<sup>2</sup> = 2<sup>5</sup> numero de blocs
+
+>Ex. 2:
+TD = 4To = 2<sup>42</sup>
+TB = 8ko = 2<sup>13</sup>
+2<sup>42</sup> / 2<sup>13</sup> = 2<sup>29</sup> numero de blocs
+
+Taille de fichier max = Taille max = TI<sup>N</sup> * TB
+
+>Nombre de niveau d'index = Log<sub>TI</sub>(TF / TB)
+
+<br>
+
+### Fichier Image
+
+##### Fichier
+|3|⇄|7|⇄|1|⇄|10|
+|-|-|-|-|-|-|-|
+
+<br>
+
+##### Disque
+|Fichier Image|0|1|2|3|4|5|6|...|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+
+<>br
+
+##### Fichier Image
+
+||Val|
+|:-:|:-:|
+|0||
+|1|10|
+|2||
+|3|7|
+|4||
+|5||
+|6||
+|7|1|
+|8||
+|9||
+|10|x|
+|...||
+
+
+>FAT12 : Disquettes
+FAT16 : Disques durs (mo)
+FAT32 : Gros disques durs (Go)
+12, 16 et 32 sont les tailles de numeros de blocs, effectivement 28 pour le FAT32.
