@@ -193,7 +193,7 @@ Taille de fichier max = Taille max = TI<sup>N</sup> * TB
 |Fichier Image|0|1|2|3|4|5|6|...|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 
-<>br
+<br>
 
 ##### Fichier Image
 
@@ -213,7 +213,7 @@ Taille de fichier max = Taille max = TI<sup>N</sup> * TB
 |...||
 
 
->FAT12 : Disquettes
-FAT16 : Disques durs (mo)
-FAT32 : Gros disques durs (Go)
+>FAT12 : Disquettes<br>
+FAT16 : Disques durs (mo)<br>
+FAT32 : Gros disques durs (Go)<br>
 12, 16 et 32 sont les tailles de numeros de blocs, effectivement 28 pour le FAT32.
