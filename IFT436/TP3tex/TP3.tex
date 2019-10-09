@@ -15,7 +15,8 @@
 \usepackage{tikz-qtree}
 \usepackage{fontawesome}
 \usepackage{tikz}
-\usetikzlibrary{automata}
+
+\usetikzlibrary{shapes,arrows,positioning,decorations.pathreplacing,calc, automata}
 
 \DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
 %usage : \mathcal{} et \mathbfcal{} for bold
@@ -187,9 +188,8 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   Advennant que chacun des bassins présents se voient attribués un corridor vers chacun des bassins soudjacents, l'équation maximal reflètera la composition du chemin le plus long. 
 
 \section{e)}
-  \noindent
-  \textbf{Bassin départ :} De toutes les paires de sommets composants les arêtes, le sommet qui se retrouvera uniquement en index $0$ de la paire, à la gauche, qui est donc toujours le sommet de départ, sera donc considéré comme sommet de départ.\\[1em]
-  \textbf{Bassin d'arrivée :} Suivre le même résonnement, mais pour le sommet qui se retrouve toujours en index $1$ de la paire et qui est donc toujours le bassin d'arrivée dans toutes les paires, sera donc considéré comme sommet d'arrivée.
+  Le \textbf{bassin de départ} est le seul bassin qui ne vas jamais se retrouver à droite dans une paire de sommet, donc qui ne sera jamais $j$ dans un couple $(i,j)$.\\[1em]
+  Le \textbf{bassin d'arrivée :} est le seul bassin qui ne vas jamais se retrouver à gauche dans une paire de sommet, donc qui ne sera jamais $i$ dans un couple $(i,j)$.
 
 
 \section{f)}
@@ -447,12 +447,155 @@ Deplus, tous les sommets peuvent être visiter moins de deux fois et tout de mê
   \textbf{Démontrez que le graphe complet \G{}$_n$ possède au moins $2^n$ arbres couvrants, $\forall n \in \mathbb{N} > 3$ .}
 \end{siderules}
 
-Une façon compréhensive de le démontrer est de représenter chacun des sommets comme une valeurs binaire.
-Lors d'un compte binaire (\textit{ie}: l'évaluation de $101_2$ qui donne $5$) on réalise qu'il y a jusqu'a $8$ manières différentes d'agencer $3$ valeurs, $3$ sommets.
-Maintenant, si nous retrouvons $4$ somets, il y a alors $4$ valeurs qui peuvent être agencer jusqu'a $16$ façons uniques. 
-Ceci, qui suit cette même relation binaire, gradue en fonction du nombre d'objet à relier par le l'arbre couvrant $\mathbfcal{H}$ du graphe complet, acyclique et non dirigé \G{}.\\
+L'énoncé stipule que pour $n=4$ où n est le nombre de gites, il y a $2^4 = 16$ réseaux possibles. Si nous ajoutons une autre gites, nous obtenons ce dernier, à $5$ gites.
 
-Ainsi, avec $n$ sommets, il y a $2^n$ manières de les agencer afin de couvrir tout les sommets et d'accomplir la tâche requise!
+\begin{figure}[!h]
+  \centering
+%%%% 5 Pentagrame vide
+\begin{tikzpicture}[node distance=2cm, baseline=0]
+  %$ Sommets
+  \tikzset{every state/.style={minimum size=10pt, inner sep=0pt, white}}
+
+  \node[state] at (0, 0.3) (0) {};
+  \node[state] at (6, 0.3) (1) {};
+  \node[state] at (1,-3)   (2) {};
+  \node[state] at (5,-3)   (3) {};
+  \node[state] at (3, 2.5) (4) {};
+
+  %% Arêtes
+  \path[-, gray]
+  (0) edge node {} (1)
+  (0) edge node {} (2)
+  (0) edge node {} (3)
+  (0) edge node {} (4)
+  (1) edge node {} (2)
+  (1) edge node {} (3)
+  (1) edge node {} (4)
+  (2) edge node {} (3)
+  (2) edge node {} (4)
+  (3) edge node {} (4)
+  ;
+
+  %% Arbre couvrant
+  %\path[-, line width=4pt, cyan]
+  %(0) edge node {} (1)
+  %(0) edge node {} (2)
+  %(1) edge node {} (3)
+  %;
+
+  %% Gîtes
+  \tikzset{every node/.style={font=\LARGE}}
+
+  \node[yshift=1.2pt] at (0) {\faHome};
+  \node[yshift=1.2pt] at (1) {\faHome};
+  \node[yshift=  0pt] at (2) {\faHome};
+  \node[yshift=  0pt] at (3) {\faHome};
+  \node[yshift=  0pt] at (4) {\faHome};
+\end{tikzpicture}
+\end{figure}
+
+Afin de prouver qu'il y a au minimum $2^n$ chemins possibles, utilisons un sous-graphes $\mathbfcal{H}$ de \G{}. En prenant le sous-graphe $\mathbfcal{H}$ possedant $4$ sommets (gites), il est possible de savoir qu'il y a $2^n$ chemins possibles.
+De ce fait, on peut voir, que ce nombre est doublé lorsque le graphe est complet (donc avec $5$ sommets).
+En effet, pour chacune des chemins en $n=4$, il y a $2$ chemins possibles lorsque $n=5$.
+\begin{figure}[!h]
+  \centering
+%%%% 5 Pentagrame arbre couvrant
+\begin{tikzpicture}[node distance=2cm, baseline=0]
+  %$ Sommets
+  \tikzset{every state/.style={minimum size=10pt, inner sep=0pt, white}}
+
+  \node[state] at (0, 0.3) (0) {};
+  \node[state] at (6, 0.3) (1) {};
+  \node[state] at (1,-3)   (2) {};
+  \node[state] at (5,-3)   (3) {};
+  \node[state] at (3, 2.5) (4) {};
+
+  %% Arêtes
+  \path[-, gray]
+  (0) edge node {} (1)
+  (0) edge node {} (2)
+  (0) edge node {} (3)
+  (0) edge node {} (4)
+  (1) edge node {} (2)
+  (1) edge node {} (3)
+  (1) edge node {} (4)
+  (2) edge node {} (3)
+  (2) edge node {} (4)
+  (3) edge node {} (4)
+  ;
+
+  % Arbre couvrant
+  \path[-, line width=4pt, magenta]
+  (4) edge node {} (0)
+  (0) edge node {} (2)
+  (2) edge node {} (3)
+  (3) edge node {} (1)
+  ;
+
+  %% Gîtes
+  \tikzset{every node/.style={font=\LARGE}}
+
+  \node[yshift=1.2pt] at (0) {\faHome};
+  \node[yshift=1.2pt] at (1) {\faHome};
+  \node[yshift=  0pt] at (2) {\faHome};
+  \node[yshift=  0pt] at (3) {\faHome};
+  \node[yshift=  0pt] at (4) {\faHome};
+\end{tikzpicture}
+\begin{tikzpicture}[node distance=2cm, baseline=0]
+  %$ Sommets
+  \tikzset{every state/.style={minimum size=10pt, inner sep=0pt, white}}
+
+  \node[state] at (0, 0.3) (0) {};
+  \node[state] at (6, 0.3) (1) {};
+  \node[state] at (1,-3)   (2) {};
+  \node[state] at (5,-3)   (3) {};
+  \node[state] at (3, 2.5) (4) {};
+
+  %% Arêtes
+  \path[-, gray]
+  (0) edge node {} (1)
+  (0) edge node {} (2)
+  (0) edge node {} (3)
+  (0) edge node {} (4)
+  (1) edge node {} (2)
+  (1) edge node {} (3)
+  (1) edge node {} (4)
+  (2) edge node {} (3)
+  (2) edge node {} (4)
+  (3) edge node {} (4)
+  ;
+
+  % Arbre couvrant
+  \path[-, line width=4pt, magenta]
+  (0) edge node {} (2)
+  (2) edge node {} (3)
+  (3) edge node {} (1)
+  (1) edge node {} (4)
+  ;
+
+  %% Gîtes
+  \tikzset{every node/.style={font=\LARGE}}
+
+  \node[yshift=1.2pt] at (0) {\faHome};
+  \node[yshift=1.2pt] at (1) {\faHome};
+  \node[yshift=  0pt] at (2) {\faHome};
+  \node[yshift=  0pt] at (3) {\faHome};
+  \node[yshift=  0pt] at (4) {\faHome};
+\end{tikzpicture}
+
+\end{figure}
+
+Donc pour $n=5$, le nombre de chemin minimum possible égale $2^4 * 2^1 = 2^5$ chemins possible.
+Donc il est possible de dire que pour un graphe complet, il existe au minimum $2^n$ arbre couvrant $n \in \mathbb{N} \geq 4$.
+
+
+%% At the Moment:
+%Une façon compréhensive de le démontrer est de représenter chacun des sommets comme une valeurs binaire.
+%Lors d'un compte binaire (\textit{ie}: l'évaluation de $101_2$ qui donne $5$) on réalise qu'il y a jusqu'a $8$ manières différentes d'agencer $3$ valeurs, $3$ sommets.
+%Maintenant, si nous retrouvons $4$ somets, il y a alors $4$ valeurs qui peuvent être agencer jusqu'a $16$ façons uniques. 
+%Ceci, qui suit cette même relation binaire, gradue en fonction du nombre d'objet à relier par le l'arbre couvrant $\mathbfcal{H}$ du graphe complet, acyclique et non dirigé \G{}.\\
+%
+%Ainsi, avec $n$ sommets, il y a $2^n$ manières de les agencer afin de couvrir tout les sommets et d'accomplir la tâche requise!
 
 
 
@@ -465,7 +608,7 @@ Ainsi, avec $n$ sommets, il y a $2^n$ manières de les agencer afin de couvrir t
 
 \begin{figure}[!h]
   \centering
-%%%% BLEU COMME DANS SON DOCUMENT
+%%%% 4 BLEU COMME DANS SON DOCUMENT
 \begin{tikzpicture}[node distance=2cm, baseline=0]
   %$ Sommets
   \tikzset{every state/.style={minimum size=10pt, inner sep=0pt, white}}
@@ -510,7 +653,7 @@ Assumant qu'il y a $1$ unité ($u$) de distance entre les coins, du carré form�
 
 \begin{figure}[!h]
   \centering
-%%%% ROUUUUUGE
+%%%% 4 ROUUUUUGE
 \begin{tikzpicture}[node distance=2cm]
   %$ Sommets
   \tikzset{every state/.style={minimum size=10pt, inner sep=0pt, white}}
