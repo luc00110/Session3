@@ -17,7 +17,6 @@
 \usepackage{tikz}
 
 
-
 \usetikzlibrary{shapes,arrows,positioning,decorations.pathreplacing,calc, automata}
 
 \DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
@@ -152,47 +151,54 @@ Jeudi, 10 octobre 2019
 \chapter{Question 1}
 \section{a)}
   \noindent
-  $\V{}$ = Les bassins du manège aquatique (sommets).\\[1em]
-  \E{} = Les corridors entre les bassins, potentiellement des glissades (arêtes).\\[1em]
-  \G{} = Manège aquatique est dirigé.
+  $\V{}$ $=$ Les bassins du manège aquatique (sommets).%\\[1em]
+  \BlankLine
+  \noindent
+  \E{} $=$ Les corridors entre les bassins, potentiellement des glissades (arêtes).%\\[1em]
+  \BlankLine
+  \noindent
+  \G{} $=$ Manège aquatique est dirigé.
 
 
 \section{b)}
-  \G{} ne peut pas être un cycle dû aux contraintes stipulées. Cette contrainte, ci-dessous, en témoigne.\\
-
+  \G{} ne peut pas être cyclique dû aux contraintes stipulées. Une contrainte particulière, ci-dessous, en témoigne.
   \begin{siderules}
     Il n'y a \textit{pas} de corridor passant d'un bassin vers lui-même.
   \end{siderules}
-  
-  \noindent
-  Il est impossible qu'un cycle soit établi avec un seul bassin considérant qu'il y a aucun corridor qui part d'un dit bassin en arrivant dans ce même bassin.\\[1em]
-  
-  
-  Finalement, cette seconde contrainte, implique que, dû à l'inclinaison, l'un ne peut pas revenir au bassin précédent. Cela implique qu'il y a aucun cycle possible et que de ce fait, le manège aquatique \G{} est acyclique et dirigé.\\
-  
+
+  Il est impossible qu'un cycle soit établi avec un seul bassin considérant qu'il y a aucun corridor qui part d'un dit bassin en arrivant dans ce même bassin.\bigskip
+
+  Finalement, cette seconde contrainte, implique que, dû à l'inclinaison, l'un ne peut pas revenir au bassin précédent. Cela implique qu'il y a aucun cycle possible et que de ce fait, le manège aquatique \G{} est acyclique et dirigé.
   \begin{siderules}
     Puisque les bassins sont situés de plus en plus bas, le long d'une colline, si on peut atteindre un bassin $j$ à partir d'un bassin $i$, alors on ne peut pas atteindre le bassin $i$ à partir du bassin $j$.
   \end{siderules}
 
 
 \section{c)}
-Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'arêtes qui rendrait \G{} cyclique et pour lesquels $|\E{}| > |\V{}| - 1$. Ainsi, dans la majorité des cas, \G{} n'est pas un arbre, car il ne respecte pas les propriétés essentielles pour en être un. Toutefois, il y a toujours la possibilité qu'aucun cycle, simple ou non, ne s'y retrouve et que le nombre d'arête soit équivalent au nombre de sommet $- 1$. De sorte que les propriétés suivantes soit respectées.\\
+Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'arêtes qui rendrait \G{} cyclique et pour lesquels $|\E{}| > |\V{}| - 1$.
+Ainsi, dans la majorité des cas, \G{} n'est pas un arbre, car il ne respecte pas les propriétés essentielles pour en être un.
+Toutefois, il y a toujours la possibilité qu'aucun cycle, simple ou non, ne s'y retrouve et que le nombre d'arête soit équivalent au nombre de sommet $- 1$.
+De sorte que les propriétés suivantes soit respectées.
+
+  \BlankLine
   \begin{itemize}
     \item\G{} est $connexe$ et $|\textit{E}| = |\textit{V}| - 1$
   \end{itemize} 
 
 \section{d)}
-  \begin{gather*}
-    min = n-1,\quad \forall n \geq 1\quad
-  \end{gather*}
-  Dans le cas minimal, les arêtes placées représenterons un graphe \G{} qui sera forcément un arbre, respectant les contraintes, ainsi que l'explication élaborée à la lettre précédente, \textbf{c)}.\\
-  \begin{gather*}
-    max = \sum_{i=1}^{n} {n-i}=\sum_{i=1}^{n} {n}-\sum_{i=1}^{n} {i}=n^{2}-\frac{n}{2}(n+1)=\frac{n^{2}-n}{2}
-  \end{gather*}
-  Advennant que chacun des bassins présents se voient attribués un corridor vers chacun des bassins soudjacents, l'équation maximal reflètera la composition du chemin le plus long. 
+Dans le cas minimal, les arêtes placées représenterons un graphe \G{} qui sera forcément un arbre, respectant les contraintes, ainsi que l'explication élaborée à la lettre précédente, \textbf{c)}.
+\begin{gather*}
+  min = n-1,\quad \forall n \geq 1\quad
+\end{gather*}
+
+Advennant que chacun des bassins présents se voient attribués un corridor vers chacun des bassins soudjacents, l'équation maximal reflètera la composition du chemin le plus long. 
+\begin{gather*}
+  max = \sum_{i=1}^{n} {n-i}=\sum_{i=1}^{n} {n}-\sum_{i=1}^{n} {i}=n^{2}-\frac{n}{2}(n+1)=\frac{n^{2}-n}{2}
+\end{gather*}
 
 \section{e)}
-  Le \textbf{bassin de départ} est le seul bassin qui ne vas jamais se retrouver à droite dans une paire de sommet, donc qui ne sera jamais $j$ dans un couple $(i,j)$.\\[1em]
+  Le \textbf{bassin de départ :} est le seul bassin qui ne vas jamais se retrouver à droite dans une paire de sommet, donc qui ne sera jamais $j$ dans un couple $(i,j)$.
+  \BlankLine
   Le \textbf{bassin d'arrivée :} est le seul bassin qui ne vas jamais se retrouver à gauche dans une paire de sommet, donc qui ne sera jamais $i$ dans un couple $(i,j)$.
 
 \newpage
@@ -200,14 +206,14 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \IncMargin{1em}
   \begin{algorithm}[H]
 
-    \caption{Calcul de la séquence au temps maximal passé dans une attraction \G{}}
+    \caption{Calcul du temps maximal passé dans une attraction \G{}.}
     \DontPrintSemicolon
     \LinesNumbered
     \SetAlgoLined
     \SetKwProg{Def}{}{:}{}
     \SetKwFunction{Parcours}{parcours}
 
-    \KwIn{Tableau asssociatif $S: [n] \times [n] \rightarrow \mathbb{N} > 0$.}
+    \KwIn{Liste d'adjacence, tableau asssociatif $S: [n] \times [n] \rightarrow \mathbb{N} > 0$.}
     \KwResult{Le temps maximal.}
     $MaxSommet \leftarrow [n]$\;
     $SommeTemps \leftarrow 0$\;
@@ -217,7 +223,7 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
 
       \If{$x$ non marquée}{
 
-        \For{$v \in S[x]$}{ %\tcp*{comments}
+        \For{$v \in S[x]$}{ %\tcp*{}
           \Parcours{$v$}\\
           $SommeTemps\leftarrow MaxSommet[Enfant] + c[x,v]$\;
           \If{$SommeTemps > MaxSommet[x]$}{
@@ -234,26 +240,25 @@ Si le graphe \G{} est considéré non dirigé, il y a plusieurs arrangements d'a
   \DecMargin{1em}
 
   \BlankLine
-
   
 Dans cette algorithme, un sommet est marqué uniquement lorsque tous ces voisins ont été marqués.
-
 Le fait d'utiliser un tableau dans lequel se trouve le temps maximal pour chaque sommet,
 il n'est plus nécéssaire de faire tous les chemins possibles. On a juste besoin d'arreter,
 dès qu'on voit un sommet marqué et prendre la valeur qui lui est attribué.
 
+\BlankLine
+
 Cet algorithme se rappele récursivement sur chacun des enfants soudjacents, jusqu'à ce qu'on 
 rencontre un sommet qui a déjè été marqué.
-
-Ainsi, l’on peut en déduire que son temps d’exécution sera, dans le pire cas, $\textbf{O}(\E{} + \V{})$ ce 
-qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n + m)$.
+Ainsi, on peut en déduire que son temps d’exécution sera, dans le pire cas, $\mathbfcal{O}(|\E{}| + |\V{}|)$ ce 
+qui respecte la contrainte comme quoi l'algorithme doit être e de $\mathbfcal{O}(n + m)$.
 
 \newpage
 \section{g)}
 \IncMargin{1em}
 \begin{algorithm}[H]
 
-  \caption{Calcul de la séquence au temps maximal passé dans une attraction \G{}, donné 5 remontées aribitrairement choisies.}
+  \caption{Calcul de la séquence au temps maximal passé dans une attraction \G{}, donné 5 remontées.}
   \DontPrintSemicolon
   \LinesNumbered
   \SetAlgoLined
@@ -287,7 +292,7 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
   \BlankLine
 
   Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsqu'il se rendra au plus long parcours précédent le bassin final,
-  et se 5 fois. La 5e fois, le sera possiblement différent mais restera cependant couvers par l'algorithme.\\[1em]
+  et se 5 fois. La 5e fois, le sera possiblement différent mais restera cependant couvers par l'algorithme.
 
 \chapter{Question 2}
 \section{a)}
@@ -295,7 +300,7 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
 \IncMargin{1em}
 \begin{algorithm}[H]
 
-  \caption{Tri d'une séquence et calcul des valeurs modales}
+  \caption{Tri d'une séquence et calcul des valeurs modales.}
   \DontPrintSemicolon
   \LinesNumbered
   \SetAlgoLined
@@ -304,7 +309,7 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
   \SetKwProg{Def}{}{:}{}
 
   \KwIn{Une séquence $S$ non vide d'éléments comparables.}
-  \KwResult{Les valeurs modales$m$ trouvées dans la séquence $S$}
+  \KwResult{Les valeurs modales $m$ trouvées dans la séquence $S$}
   \BlankLine
   $mode \leftarrow [\ ]$\;
   $modeQty \leftarrow 0$\;
@@ -312,7 +317,7 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
   \Def{\TMode($x$)}{
 
     \If{$|x|=0$}{
-      \Return{$mode$}
+      \Return{$mode$}\tcp*{1\textsuperscript{re} condition d'arret.}
       }
     \Else{
       $pivot \leftarrow$ \Med{$x$}\;
@@ -331,7 +336,7 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
 
       \Else{
         \TMode{$gauche$}\;
-        \TMode{$droite$}
+        \TMode{$droite$}\tcp*{2\textsuperscript{e} cond. d'arret $\neq$ trouverMode(\textit{centre}).}
       }
     }
   }
@@ -400,20 +405,19 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
   \SetKwFunction{Vis}{visiter}
   \SetKwProg{Def}{}{:}{}
 
-  \KwIn{Un graph \G{} tel que \G{}$=(\V{},\E{})$ est non dirié et un sommet $u \in \V{}$}
+  \KwIn{Un graphe\G{} tel que \G{}$=(\V{},\E{})$ est non dirié et un sommet $u \in \V{}$}
   \KwResult{Si le graphe est un arbre, ou non.}
   \BlankLine
   $Visites \leftarrow 0$\;
 
   \Def{\Vis{$x$}}{
 
-    \If{$x$ est marqué}{
-      \Return{$Non\_Arbre$}
-    }
     \textbf{marquer} $x$\;
     $Visites \leftarrow Visites + 1$\;
     \ForAll{voisins de $x \in \V{} : x \rightarrow y$}{
-      \Vis{$y$}\;
+      \If{$y$ non marqué}{
+        \Vis{$y$} \tcp*{Récursif, mais jamais plus d'une fois par noeud.}
+      }      
     }
   }
   \Vis{$u$}\;
@@ -428,9 +432,10 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
 
 \BlankLine
 
-Cet algorithme parcours le graph au complet. Si un sommet est visité plus d'une fois, c'est cyclique. Cela est uniquement véridicte lorsqu'on empêche de visiter le noeud précédents en visitant tous les voisins immédiats.\\
-
-Deplus, tous les sommets peuvent être visiter moins de deux fois et tout de même il pourrait y manquer certains sommets, d'ou la vérification si le nombre de visites est bien égale a la somme des sommets dans le graphes!
+Cet algorithme parcours le graphe au complet. Si un sommet est visité plus d'une fois, c'est cyclique.
+Ceci dit, cet algorithme se rappele sur chacun des noeuds un maximum d'une fois.
+À la fin de son exécution, si la variable $Visites = |\V{}|$, nous avons bien un arbre! 
+Ainsi, nous pouvons affirmer que le temps d'exécution maximal correspondra à $\mathbfcal{O}(|V|)$. Définissant $n$ pour le nombre de sommet, le temps est alors de $\mathbfcal{O}(n)$.
 \newpage
 \section{b)}
 
@@ -638,8 +643,8 @@ Donc il est possible de dire que pour un graphe complet, il existe au minimum $2
 \end{tikzpicture}
 \end{figure}
 
-Dans cette image, on retrouve un arbre couvrant minimal qui couvre $4$ sommets d'un graph \G{} à $4$ sommets.
-Assumant qu'il y a $1$ unité ($u$) de distance entre les coins, du carré formé, adjacants, le graph aurait une longueur suivant l'équation ci-dessus.
+Dans cette image, on retrouve un arbre couvrant minimal qui couvre $4$ sommets d'un graphe\G{} à $4$ sommets.
+Assumant qu'il y a $1$ unité ($u$) de distance entre les coins, du carré formé, adjacants, le grapheaurait une longueur suivant l'équation ci-dessus.
 
 \BlankLine
 
@@ -654,7 +659,7 @@ Assumant qu'il y a $1$ unité ($u$) de distance entre les coins, du carré form�
   \node[state] [right of=0] (1) {};
   \node[state] [below of=0] (2) {};
   \node[state] [below of=1] (3) {};
-  \node[text width=4cm, anchor=west, right, align=center] at (4, -1){$4(\frac{1}{2})(1^2 + 1^2)=2^{\frac{1}{2}}=2.8284\dots u$};
+  \node[text width=4cm, anchor=west, right, align=center] at (4, -1){$4\cdot(\frac{1}{2})\cdot\sqrt{(1^2 + 1^2)}=2\cdot \sqrt{2} =2.8284\dots u$};
 
   %% Arêtes
   \path[-, gray]
