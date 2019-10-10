@@ -1,12 +1,26 @@
 -- R01.
 -- inscrireMembre <prenom> <nom> <motDePasse> <noMembre>
 -- Cette méthode crée un compte pour un membre.
+
+  --Select pour savoir si c'est le premier memebre
+/*SELECT
+  CASE
+    WHEN COUNT(noMembre)=0 THEN TRUE
+    ELSE FALSE
+  END AS seraLePremierMembre
+  FROM Membre;*/
+
 INSERT INTO Membre(nom, prenom, noMembre, motDePasse, admin) VALUES
-  ('Allard','Alain','000000','qwerty','0');
+  ('Allard','Alain','1','qwerty','0');
 
 -- R02.
 -- supprimerMembre <noMembre>
 -- Cette méthode supprime le compte du membre, seulement s’il ne possède aucun lot à lui seul.
+SELECT *
+  FROM MembreLot
+  WHERE  nomLot = 'Lot3'
+;
+
 DELETE FROM Membre
   WHERE noMembre = '000000';
 
@@ -75,7 +89,7 @@ INSERT INTO Plante(nomPlante, tempsDeCulture) VALUES
 -- Permet à un administrateur de rendre une plante indisponible, seulement si elle n’est en culture dans aucun lot.
 UPDATE Plante
   SET estDisponible = '0'
-  WHERE nomPlante = 'CeriseTomate';
+  WHERE nomPlante = 'TomateCerise';
 
 -- R11.
 -- planterPlante <nomPlante> <nomLot> <noMembre> <nbExemplaires>
