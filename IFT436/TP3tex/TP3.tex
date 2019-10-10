@@ -250,56 +250,39 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
 
 \newpage
 \section{g)}
-  \IncMargin{1em}
-  \begin{algorithm}[H]
+\IncMargin{1em}
+\begin{algorithm}[H]
 
-    \caption{Calcul de la séquence au temps maximal passé dans une attraction \G{}, donné $5$ remontées}
-    \DontPrintSemicolon
-    \LinesNumbered
-    \SetAlgoLined
-    \SetKwProg{Def}{}{:}{}
-    \SetKwFunction{Parcours}{parcours}
+  \caption{Calcul de la séquence au temps maximal passé dans une attraction \G{}, donné 5 remontées aribitrairement choisies.}
+  \DontPrintSemicolon
+  \LinesNumbered
+  \SetAlgoLined
+  \SetKwProg{Def}{}{:}{}
+  \SetKwFunction{Parcours}{parcours}
 
-    \KwIn{Manège \G{} tel que \G{}$ = (\V{},\E{})$, que le sommet initial $u$ tel que $u \in \V{}$, que $v \in \V{}$, ainsi que $v$ est le bassin finale.}
-    \KwResult{Une séquence $S$ de bassins, de temps maximal dans le manège \G{}, considérant que l'utilisateur peut remonter au bassin initial un maximum de $5$ fois.}
-    $S \leftarrow [\ ]$\;
-    $Ttot \leftarrow 0$\;
-    $Parent \leftarrow u$\;
-    $Ascension \leftarrow 5$\;
+  \KwIn{Liste d'adjacence, tableau asssociatif $c: [n] \times [n] -> N>0$ et tableau asssociatif $r: [n] -> \mathbb{N} > 0$}
+  \KwResult{Le temps maximal.}
+  $MaxSommet \leftarrow [n]$\;
+  $SommeTemps \leftarrow 0$\;
+  $Enfant \leftarrow 0$\;
 
-    \Def{\Parcours($x$)}{
-      $SPrime \leftarrow S$\;
-      $Temps \leftarrow Ttot$\;
+  \Def{\Parcours($x$)}{
 
-      \If{$x$ non marquée}{
-        $Temps \leftarrow Temps + c[Parent, x]$\;
-        \textbf{marquer} $x$\;
-        \textbf{ajouter} $x$ à $SPrime$\;
-        
-        \If{$Temps > Ttot$}{
-          $Ttot \leftarrow Temps$\;
-          $S \leftarrow SPrime$\;
-        }
+    \If{$x$ non marquée}{
 
-        \If{prochain voisin de $x = v$}{
-          $Ascension \leftarrow Acension - 1$\;
-          \textbf{retirer} les marqueurs\;
-          $Parent \leftarrow S[0]$\;
-          \Parcours{$Parent$}
-        }
-
-        \Else{
-          \For{$u \in \V{} : x \rightarrow y$}{
-            $Parent \leftarrow x$\;
-            \Parcours{$y$}
-          }
-        }
+      \For{$v \in S[x]$}{ %\tcp*{comments}
+        \Parcours{$v$}\\
+        $SommeTemps\leftarrow MaxSommet[Enfant] + c[x,v]$\;
+        $MaxSommet[x-1] \leftarrow MaxSommet[x-1] + SommeTemps$\;
       }
+      $MaxSommet[x-1] \leftarrow MaxSommet[x-1] + 5 \cdot r[x]$\;
     }
-    \Parcours{$u$}\;
-    \Return{$S$}
-  \end{algorithm}
-  \DecMargin{1em}
+    $Enfant \leftarrow x-1$\;
+    }
+  \Parcours{$u$}\;
+  \Return{$MaxSommet[0]$}
+\end{algorithm}
+\DecMargin{1em}
 
   \BlankLine
 
@@ -434,7 +417,7 @@ qui respecte la contrainte comme quoi l'algorithme doit être e de $\textbf{O}(n
     }
   }
   \Vis{$u$}\;
-  \If{$Visites \neq ||$}{
+  \If{$Visites \neq |\V{}|$}{
     \Return{$Non\_Arbre$}
   }
   \Else{
