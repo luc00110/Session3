@@ -52,11 +52,11 @@ Si le graphe ***G*** est considéré non dirigé, il y a plusieurs arrangements 
 
 <h4 name="1-d">d)</h4>
 
-![For All](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3md/forall.png)
+![For All](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3/TP3md/forall.png)
 
-![Min](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3md/min.png)
+![Min](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3/TP3md/min.png)
 
-![Max](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3md/max.png)
+![Max](https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3/TP3md/max.png)
 
 
 <br>
@@ -195,11 +195,11 @@ Ici, il fera exactement comme l'algorithme précédent, à l'exception que lorsq
 <table>
 <tr><th>
 a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>&nbsp; 
-<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3md/Gites_Orange.png">
+<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3/TP3md/Gites_Orange.png">
 <br>c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d
 </th><th>
 a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>&nbsp;     
-<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3md/Gites_Rose.png">
+<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3/TP3md/Gites_Rose.png">
 <br>c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d
 </th></tr>
 <tr><td>
@@ -264,9 +264,9 @@ Ainsi, avec *n* sommets, il y a 2<sup>*n*</sup> manières de les agencer afin de
 **Donnez un exemple de points ou un arbre couvrant minimal entre ces points est plus long qu'un arbre couvrant minimal avec un nouveau point ajouté (une halte).**
 <table>
 <tr><th>
-<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3md/Gites_Bleu.png">
+<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3/TP3md/Gites_Bleu.png">
 </th><th>
-<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3md/Gites_Vert.png">
+<img src="https://raw.githubusercontent.com/luc00110/Session3/master/IFT436/TP3/TP3md/Gites_Vert.png">
 </th></tr>
 <tr><td>
 
