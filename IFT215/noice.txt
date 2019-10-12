@@ -3,52 +3,52 @@
 - T.C. = Taux de conversion
 
 - 5 trucs: 
-	- EfficacitÈ (Appropriation)
-	- EfficacitÈ (Apprentissage)
+	- Efficacit√© (Appropriation)
+	- Efficacit√© (Apprentissage)
 	- Satisfaction
-	- MÈmorisation
+	- M√©morisation
 	- Efficience
 
 - Loi de Parreto : 80/20
 
 - Nielsen:
-	- UtilisabilitÈ est un critËre d'acceptation
-	- UtilitÈ rÈfËre ‡ la pertinence du systËme
+	- Utilisabilit√© est un crit√®re d'acceptation
+	- Utilit√© r√©f√®re √† la pertinence du syst√®me
 
 - Norme ISO9241
-	- EfficacitÈ
+	- Efficacit√©
 	- Efficience
 	- Satisfaction
 
 ======================================================
 =======================PP 2===========================
 
-- Minimiser l'effort de la mÈmoire ‡ court terme
+- Minimiser l'effort de la m√©moire √† court terme
 
-- PrÈvenir les erreurs dËs la conception
+- Pr√©venir les erreurs d√®s la conception
 
-- CohÈrence
+- Coh√©rence
 	- Ctrl = Foward vs Find
 	- mac : drag & Drop usb sur poubelle pour eject...
 
 - LUCID : Logical User-Centered Interaction Design, 6 steps.
 	1. Prospective :  (5W) who what where when why
 	2. Exploration : Clarifier les attentes de l'utilisateur  ****IMPORTANT****
-	3. Conception globale : PremiËre Èbauche du GUI
-	4. Conception dÈtaillÈe : CrÈer chaque interface et spÈcifier le positionnement des ÈlÈments
-	5. ImplÈmentation : Test d'utilisabilitÈ
-	6. DÈploiment : Mesurer la satisfaction des utilisateurs
+	3. Conception globale : Premi√®re √©bauche du GUI
+	4. Conception d√©taill√©e : Cr√©er chaque interface et sp√©cifier le positionnement des √©l√©ments
+	5. Impl√©mentation : Test d'utilisabilit√©
+	6. D√©ploiment : Mesurer la satisfaction des utilisateurs
 
 - Questions importantes :
 	- Qui est l'utilisateur (profil)
 	- Quel est son environnement
-	- Quelles sont els diverses t‚ches qu'il rÈalisera?
+	- Quelles sont els diverses t√¢ches qu'il r√©alisera?
 
 - Analyse concurentielle
 
-- Description des t‚ches accomplittes via l'interface (type, c'est quoi, quand, frÈquence, etc.)
+- Description des t√¢ches accomplittes via l'interface (type, c'est quoi, quand, fr√©quence, etc.)
 
-- Commentaire des utilisateur aprËs leur utilisation de l'interface.
+- Commentaire des utilisateur apr√®s leur utilisation de l'interface.
 
 ======================================================
 =======================PP 3===========================
@@ -57,48 +57,48 @@
 
 - Groupement de bouttons c'est BIEN, s'ils ont des foncitons similaires.
 
-- Menus ou barres d'outils : doivent possÈdÈ des icones universellement reconnus.
+- Menus ou barres d'outils : doivent poss√©d√© des icones universellement reconnus.
 
-- Panneau d'action : menu specialiser qui se cache, augmentant la visibilitÈ. ****VISIBILIT…**** NOICE
+- Panneau d'action : menu specialiser qui se cache, augmentant la visibilit√©. ****VISIBILIT√â**** NOICE
 
 - Appercue (ie quand tu imprime) 
 
 - Indicateur Temporel (ie loading bar)
 
-- ** EntrÈ d'information :
+- ** Entr√© d'information :
 	- Binaire :
 		- toggle, check box, slider, bouton
 
 	- Petit nombre d'option :
 		- Boutons iconiques (ie justification, a gauche a droite),
-		- liste a choix unique, dÈroulement (ark, petit)
+		- liste a choix unique, d√©roulement (ark, petit)
 
 	- Grand nombre d'option : 
-		- Liste dÈroulante avec scroll bar, liste reguliere (moins d'espace, plus explicite)
+		- Liste d√©roulante avec scroll bar, liste reguliere (moins d'espace, plus explicite)
 
 	- N options parmis plusieurs option sans ordre :
 		- check boxes, plusieurs listes dans une table
 		- Deux liste side by side, comme dans Archimate: a gauche options, a droite ce que j'ai choisi.
 		- ****The All Mighty DRAG 'N DROP****
 
-- EntrÈe Textuelle:
+- Entr√©e Textuelle:
 	- Titre, information, example, message d'erreur.
-	- prÈvoir un format qui permet de gere le plus d'erreur possible.
-	- Groupement logiques, formes agrÈables, Movement du curseur, Espace lisible et suffisants.
+	- pr√©voir un format qui permet de gere le plus d'erreur possible.
+	- Groupement logiques, formes agr√©ables, Movement du curseur, Espace lisible et suffisants.
 
-- AutocomplÈtion : Propose des champs de texte. Utile pour facilitÈ et accÈlÈrer la t‚che de l'usager.
+- Autocompl√©tion : Propose des champs de texte. Utile pour facilit√© et acc√©l√©rer la t√¢che de l'usager.
 
-- Valeur par dÈfaut : permet de prÈvenir des problemes si l'utilisateur ne sait pas c'est quoi :
-	- Pointe le choix le plus appropriÈ/communs
+- Valeur par d√©faut : permet de pr√©venir des problemes si l'utilisateur ne sait pas c'est quoi :
+	- Pointe le choix le plus appropri√©/communs
 	- Explique bien la tache sans prendre plus de palce
 	- Moins de temps
-	- RÈduire le travail de l'usager.
-	- Y placer une valeur par dÈfaut.
+	- R√©duire le travail de l'usager.
+	- Y placer une valeur par d√©faut.
 	
-- Valeurs numÈrique
+- Valeurs num√©rique
 	- un seul standard
-	- diffÈrents formats
-	- slider graduÈ, pour facilitÈ la prise de valeurs.
+	- diff√©rents formats
+	- slider gradu√©, pour facilit√© la prise de valeurs.
 
 - Composantes graphiques evite que l'utilisateur se pose des questions.
 	- Doit respecter els conventions
@@ -107,18 +107,18 @@
 ======================================================
 =======================PP 4===========================
 
-- HiÈrarchie visuelle / Movement visuelle, Organisation visuelle
+- Hi√©rarchie visuelle / Movement visuelle, Organisation visuelle
 
-- 'Manipuler' l'attention de l'utilisateurs. Exemple de l'Ètude qui traque le mouvement des yeux pour des publicitÈs..
+- 'Manipuler' l'attention de l'utilisateurs. Exemple de l'√©tude qui traque le mouvement des yeux pour des publicit√©s..
 	- Permet de placer les informations les plus importantes aux bons endroits.
 	- Exemple d'une page de journal avec les headlines et les (textes en gras au dessus des textes, genres d'abstract).
 
-- Attention sÈlective : ne pas afficher plsus de 5 (+- 2) items.
+- Attention s√©lective : ne pas afficher plsus de 5 (+- 2) items.
 	- Permet de focusser sur un seul objet a la fois.
 
-- Le cerveau peu assumer des formes memes trËs cachÈes. (dÈduction, l'exemple de la chaise)
+- Le cerveau peu assumer des formes memes tr√®s cach√©es. (d√©duction, l'exemple de la chaise)
 
-- ProximitÈ : groupement, exemple: paragraphe vs intro vs conclu etc. ou encore (copier/coller/couper | save/delete)
+- Proximit√© : groupement, exemple: paragraphe vs intro vs conclu etc. ou encore (copier/coller/couper | save/delete)
 
 - Poids visuelle, bold vs italic, vs police et taille police, positionnement, alignement, contrast. en haut a gauche etc.
 
@@ -127,34 +127,34 @@
 - Notre cerveau voix des formes partout meme si on ne le veux pas (exemple des images whacks la face sur la table a manger avec la bouffe...)
 
 **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** 
-- ****TH…ORIE DE LA GESALT (PERCEPTION)****
+- ****TH√âORIE DE LA GESALT (PERCEPTION)****
 
-- …mergence = voir des images ou il n'y a pas vraiment d'image. Exemple du chien en points noirs sur du blanc.
+- √âmergence = voir des images ou il n'y a pas vraiment d'image. Exemple du chien en points noirs sur du blanc.
 
-- RÈification = voir des formes par objets non connecter. Exemple du triange avec 3 tranches de kiwis... (gourdo noir & blancs)
+- R√©ification = voir des formes par objets non connecter. Exemple du triange avec 3 tranches de kiwis... (gourdo noir & blancs)
 
-- Invarience = on reconnait l'objet peu import ses modifications. Exemple du joystick dÈformer.
+- Invarience = on reconnait l'objet peu import ses modifications. Exemple du joystick d√©former.
 
 - Perception multiple : Cube ou toutes les lignes sont pleines. Le cube ressort ou entre dans la feuille ???
 
-- Figure-Fond PAS DE TEXTURE EN BACKGROUND NI DE TRUCS FONC…S
+- Figure-Fond PAS DE TEXTURE EN BACKGROUND NI DE TRUCS FONC√âS
 
-- Regroupement = Dans un journal, les articles sont regroupÈs, dÈlimitÈs par des espaces. Comme cette liste ci!
+- Regroupement = Dans un journal, les articles sont regroup√©s, d√©limit√©s par des espaces. Comme cette liste ci!
 
-- Loi de ProximitÈ nous infËre des groupements. Prev. et Next sont proche car similaire fonction.
+- Loi de Proximit√© nous inf√®re des groupements. Prev. et Next sont proche car similaire fonction.
 
-- Loi de SimilaritÈ = les objets ont des caractÈristiques remarcablement similaire qui nous permet de les regroupÈ mentalement ou des les associÈes.
+- Loi de Similarit√© = les objets ont des caract√©ristiques remarcablement similaire qui nous permet de les regroup√© mentalement ou des les associ√©es.
 
-- Destin Commun = dÈlimitation par modification lÈgËre parmis des groupes d'objet similaires :
+- Destin Commun = d√©limitation par modification l√©g√®re parmis des groupes d'objet similaires :
 	- |||||||||||||||||||||||||||////////////////////////////////////|||||||||||||||||||||||||||||
 
-- Loi mouvement parralËle : ce qui bouge ensemble (groupement) est percu liÈ ensemble.
+- Loi mouvement parral√®le : ce qui bouge ensemble (groupement) est percu li√© ensemble.
 
 - Loi de Fermeture : On peut completer un image car les formes vont chercher des images fort bien connues. ex. Ralph Lauren
-	- sur une page nos yeux crÈer de l'espacement malgrÈ qu'il n'y a rien d'implicite pour le dÈmontrer. Ex site de l'udes.
+	- sur une page nos yeux cr√©er de l'espacement malgr√© qu'il n'y a rien d'implicite pour le d√©montrer. Ex site de l'udes.
 
-- Loi de ContinuitÈ : on voit et percoit des lignes lisses partout et c'est bien de respecter ca.
+- Loi de Continuit√© : on voit et percoit des lignes lisses partout et c'est bien de respecter ca.
 
-- Loi de l'Èvasion/ attidue : formes ou dessin qui vont vers le haut droit ou gauche de l'image, comme le logo d'Addidas, Nike ou Twitter. POINT DE FUITE
+- Loi de l'√©l√©vation/ attidue : formes ou dessin qui vont vers le haut droit ou gauche de l'image, comme le logo d'Addidas, Nike ou Twitter. POINT DE FUITE
 
 ======================================================
