@@ -68,11 +68,14 @@
 - ** Entré d'information :
 	- Binaire :
 		- toggle, check box, slider, bouton
+
 	- Petit nombre d'option :
 		- Boutons iconiques (ie justification, a gauche a droite),
 		- liste a choix unique, déroulement (ark, petit)
+
 	- Grand nombre d'option : 
 		- Liste déroulante avec scroll bar, liste reguliere (moins d'espace, plus explicite)
+
 	- N options parmis plusieurs option sans ordre :
 		- check boxes, plusieurs listes dans une table
 		- Deux liste side by side, comme dans Archimate: a gauche options, a droite ce que j'ai choisi.
@@ -122,20 +125,36 @@
 - milieu en haut on place le menu car c'est important et on est porter a regarder la rapidement.
 
 - Notre cerveau voix des formes partout meme si on ne le veux pas (exemple des images whacks la face sur la table a manger avec la bouffe...)
-**** **** **** **** **** **** **** **** ****
+
+**** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** 
 - ****THÉORIE DE LA GESALT (PERCEPTION)****
-	- Émergence = voir des images ou il n'y a pas vraiment d'image. Exemple du chien en points noirs sur du blanc.
-	- Réification = voir des formes par objets non connecter. Exemple du triange avec 3 tranches de kiwis... (gourdo noir & blancs)
-	- Invarience = on reconnait l'objet peu import ses modifications. Exemple du joystick déformer.
-	- Perception multiple : Cube ou toutes les lignes sont pleines. Le cube ressort ou entre dans la feuille ???
-	- Figure-Fond PAS DE TEXTURE EN BACKGROUND NI DE TRUCS FONCÉS
-	- Regroupement = Dans un journal, les articles sont regroupés, délimités par des espaces. Comme cette liste ci!
-	- Loi de Proximité nous infère des groupements. Prev. et Next sont proche car similaire fonction.
-	- Loi de Similarité = les objets ont des caractéristiques remarcablement similaire qui nous permet de les regroupé mentalement ou des les associées.
-	- Destin Commun = délimitation par modification légère parmis des groupes d'objet similaires :
-		- |||||||||||||||||||||||||||////////////////////////////////////|||||||||||||||||...
-	- Loi mouvement parralèle : ce qui bouge ensemble (groupement) est percu lié ensemble.
-	- Loi de Fermeture : On peut completer un image car les formes vont chercher des images fort bien connues. ex. Ralph Lauren
-		- sur une page nos yeux créer de l'espacement malgré qu'il n'y a rien d'implicite pour le démontrer. Ex site de l'udes.
-	- Loi de Continuité : on voit et percoit des lignes lisses partout et c'est bien de respecter ca.
-	- Loi de l'évasion/ attidue : formes ou dessin qui vont vers le haut droit ou gauche de l'image, comme le logo d'Addidas, Nike ou Twitter. POINT DE FUITE
+
+- Émergence = voir des images ou il n'y a pas vraiment d'image. Exemple du chien en points noirs sur du blanc.
+
+- Réification = voir des formes par objets non connecter. Exemple du triange avec 3 tranches de kiwis... (gourdo noir & blancs)
+
+- Invarience = on reconnait l'objet peu import ses modifications. Exemple du joystick déformer.
+
+- Perception multiple : Cube ou toutes les lignes sont pleines. Le cube ressort ou entre dans la feuille ???
+
+- Figure-Fond PAS DE TEXTURE EN BACKGROUND NI DE TRUCS FONCÉS
+
+- Regroupement = Dans un journal, les articles sont regroupés, délimités par des espaces. Comme cette liste ci!
+
+- Loi de Proximité nous infère des groupements. Prev. et Next sont proche car similaire fonction.
+
+- Loi de Similarité = les objets ont des caractéristiques remarcablement similaire qui nous permet de les regroupé mentalement ou des les associées.
+
+- Destin Commun = délimitation par modification légère parmis des groupes d'objet similaires :
+	- |||||||||||||||||||||||||||////////////////////////////////////|||||||||||||||||||||||||||||
+
+- Loi mouvement parralèle : ce qui bouge ensemble (groupement) est percu lié ensemble.
+
+- Loi de Fermeture : On peut completer un image car les formes vont chercher des images fort bien connues. ex. Ralph Lauren
+	- sur une page nos yeux créer de l'espacement malgré qu'il n'y a rien d'implicite pour le démontrer. Ex site de l'udes.
+
+- Loi de Continuité : on voit et percoit des lignes lisses partout et c'est bien de respecter ca.
+
+- Loi de l'évasion/ attidue : formes ou dessin qui vont vers le haut droit ou gauche de l'image, comme le logo d'Addidas, Nike ou Twitter. POINT DE FUITE
+
+======================================================
