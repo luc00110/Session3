@@ -1,0 +1,160 @@
+=======================PP 1===========================
+
+- T.C. = Taux de conversion
+
+- 5 trucs: 
+	- Efficacité (Appropriation)
+	- Efficacité (Apprentissage)
+	- Satisfaction
+	- Mémorisation
+	- Efficience
+
+- Loi de Parreto : 80/20
+
+- Nielsen:
+	- Utilisabilité est un critère d'acceptation
+	- Utilité réfère à la pertinence du système
+
+- Norme ISO9241
+	- Efficacité
+	- Efficience
+	- Satisfaction
+
+======================================================
+=======================PP 2===========================
+
+- Minimiser l'effort de la mémoire à court terme
+
+- Prévenir les erreurs dès la conception
+
+- Cohérence
+	- Ctrl = Foward vs Find
+	- mac : drag & Drop usb sur poubelle pour eject...
+
+- LUCID : Logical User-Centered Interaction Design, 6 steps.
+	1. Prospective :  (5W) who what where when why
+	2. Exploration : Clarifier les attentes de l'utilisateur  ****IMPORTANT****
+	3. Conception globale : Première ébauche du GUI
+	4. Conception détaillée : Créer chaque interface et spécifier le positionnement des éléments
+	5. Implémentation : Test d'utilisabilité
+	6. Déploiment : Mesurer la satisfaction des utilisateurs
+
+- Questions importantes :
+	- Qui est l'utilisateur (profil)
+	- Quel est son environnement
+	- Quelles sont els diverses tâches qu'il réalisera?
+
+- Analyse concurentielle
+
+- Description des tâches accomplittes via l'interface (type, c'est quoi, quand, fréquence, etc.)
+
+- Commentaire des utilisateur après leur utilisation de l'interface.
+
+======================================================
+=======================PP 3===========================
+
+- WIMP : Windows Icons Menus Pointers AKA le squelette de tous GUI
+
+- Groupement de bouttons c'est BIEN, s'ils ont des foncitons similaires.
+
+- Menus ou barres d'outils : doivent possédé des icones universellement reconnus.
+
+- Panneau d'action : menu specialiser qui se cache, augmentant la visibilité. ****VISIBILITÉ**** NOICE
+
+- Appercue (ie quand tu imprime) 
+
+- Indicateur Temporel (ie loading bar)
+
+- ** Entré d'information :
+	- Binaire :
+		- toggle, check box, slider, bouton
+
+	- Petit nombre d'option :
+		- Boutons iconiques (ie justification, a gauche a droite),
+		- liste a choix unique, déroulement (ark, petit)
+
+	- Grand nombre d'option : 
+		- Liste déroulante avec scroll bar, liste reguliere (moins d'espace, plus explicite)
+
+	- N options parmis plusieurs option sans ordre :
+		- check boxes, plusieurs listes dans une table
+		- Deux liste side by side, comme dans Archimate: a gauche options, a droite ce que j'ai choisi.
+		- ****The All Mighty DRAG 'N DROP****
+
+- Entrée Textuelle:
+	- Titre, information, example, message d'erreur.
+	- prévoir un format qui permet de gere le plus d'erreur possible.
+	- Groupement logiques, formes agréables, Movement du curseur, Espace lisible et suffisants.
+
+- Autocomplétion : Propose des champs de texte. Utile pour facilité et accélérer la tâche de l'usager.
+
+- Valeur par défaut : permet de prévenir des problemes si l'utilisateur ne sait pas c'est quoi :
+	- Pointe le choix le plus approprié/communs
+	- Explique bien la tache sans prendre plus de palce
+	- Moins de temps
+	- Réduire le travail de l'usager.
+	- Y placer une valeur par défaut.
+	
+- Valeurs numérique
+	- un seul standard
+	- différents formats
+	- slider gradué, pour facilité la prise de valeurs.
+
+- Composantes graphiques evite que l'utilisateur se pose des questions.
+	- Doit respecter els conventions
+	- Choisir en fonction de l'espace dans l'interface.
+
+======================================================
+=======================PP 4===========================
+
+- Hiérarchie visuelle / Movement visuelle, Organisation visuelle
+
+- 'Manipuler' l'attention de l'utilisateurs. Exemple de l'étude qui traque le mouvement des yeux pour des publicités..
+	- Permet de placer les informations les plus importantes aux bons endroits.
+	- Exemple d'une page de journal avec les headlines et les (textes en gras au dessus des textes, genres d'abstract).
+
+- Attention sélective : ne pas afficher plsus de 5 (+- 2) items.
+	- Permet de focusser sur un seul objet a la fois.
+
+- Le cerveau peu assumer des formes memes très cachées. (déduction, l'exemple de la chaise)
+
+- Proximité : groupement, exemple: paragraphe vs intro vs conclu etc. ou encore (copier/coller/couper | save/delete)
+
+- Poids visuelle, bold vs italic, vs police et taille police, positionnement, alignement, contrast. en haut a gauche etc.
+
+- milieu en haut on place le menu car c'est important et on est porter a regarder la rapidement.
+
+- Notre cerveau voix des formes partout meme si on ne le veux pas (exemple des images whacks la face sur la table a manger avec la bouffe...)
+
+**** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** 
+- ****THÉORIE DE LA GESALT (PERCEPTION)****
+
+- Émergence = voir des images ou il n'y a pas vraiment d'image. Exemple du chien en points noirs sur du blanc.
+
+- Réification = voir des formes par objets non connecter. Exemple du triange avec 3 tranches de kiwis... (gourdo noir & blancs)
+
+- Invarience = on reconnait l'objet peu import ses modifications. Exemple du joystick déformer.
+
+- Perception multiple : Cube ou toutes les lignes sont pleines. Le cube ressort ou entre dans la feuille ???
+
+- Figure-Fond PAS DE TEXTURE EN BACKGROUND NI DE TRUCS FONCÉS
+
+- Regroupement = Dans un journal, les articles sont regroupés, délimités par des espaces. Comme cette liste ci!
+
+- Loi de Proximité nous infère des groupements. Prev. et Next sont proche car similaire fonction.
+
+- Loi de Similarité = les objets ont des caractéristiques remarcablement similaire qui nous permet de les regroupé mentalement ou des les associées.
+
+- Destin Commun = délimitation par modification légère parmis des groupes d'objet similaires :
+	- |||||||||||||||||||||||||||////////////////////////////////////|||||||||||||||||||||||||||||
+
+- Loi mouvement parralèle : ce qui bouge ensemble (groupement) est percu lié ensemble.
+
+- Loi de Fermeture : On peut completer un image car les formes vont chercher des images fort bien connues. ex. Ralph Lauren
+	- sur une page nos yeux créer de l'espacement malgré qu'il n'y a rien d'implicite pour le démontrer. Ex site de l'udes.
+
+- Loi de Continuité : on voit et percoit des lignes lisses partout et c'est bien de respecter ca.
+
+- Loi de l'élévation/ attidue : formes ou dessin qui vont vers le haut droit ou gauche de l'image, comme le logo d'Addidas, Nike ou Twitter. POINT DE FUITE
+
+======================================================
