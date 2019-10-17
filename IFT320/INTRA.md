@@ -14,19 +14,20 @@
  - Appels systeme (interruption logicielle)
 
 #### 1 b)
-**Pourquoi a-t'on un probleme de synchronisation des entrées/sorties lors du traitement de l'UTC?(...)**
+**Pourquoi a-t'on un probleme de synchronisation entre les entrées/sorties et le traitement de l'UTC?**
  - Il y a un programme qui s'execute plus rapidement qu'un autre.
+ - 
 
 #### 1 c)
 **Faites la distinction entre les termes suivants: *Tampon*, *Cache* et '*Spool*'.**
 
 cache
  - hash map
- - (...)
+ - Conserve les donnees pou8r accelerer les usages futures.
 
 tampon
  - une file
- - (...)
+ - Accumule des donnes pour etre consommé par un procédé plus lent.
 
 spool
  - Permet de faire les i/o (entrées/sorties) d'un programme avant sont execution. Pour des i/o très lent. Si lent qu'on choisi de ne pas consomé de mémoire pour ca, on le laisse sur le disque dur. C'est un tampon à très longue durés. 
@@ -41,11 +42,13 @@ spool
 
 #### 1 e)
 **Éxpliquer la différence entre la gestion asynchrone des entrées/sorties par le système d'exploitation et l'implantation de services asynchrones pour les applications.**
+
 *Dessin?? awww maaan..*
+
 Gestion asynchrone des entré sorties par le O.S.
  1. Si vous faites un WRITE du coté application, les données vont êtres copiées vers le tampon qui est du coté systeme.
  2. Si tampon n'est pas plein, Redonner le controle au user (App)
- 3. (...)
+ 3. Si tampon est plein, mettre en 
 
 Implantation de Services Asynchrone pour app:
  1. Effectuer une lecture.
@@ -61,7 +64,7 @@ cin>>x; se doit d'etre synchrone
 cout<<x; ne peut somplement pas être synchrone. 
 
 Résumé:
->Gestion asynchrone des E/S par OS: Utilisation d'un tampon par le ... pour ne pas attendre après ce dernier. Doit bien etre géré par l'app
+>Gestion asynchrone des E/S par OS: Utilisation d'un tampon par le OS pour ne pas attendre après ce dernier. Doit bien etre géré par l'app
 
 >Déclencher une demande de E/S meme si la demande précédente n'est pas compliquer. Ne fais pas atttendre l'app après l'UTC pour une réponse. Est géré par le tampon, du systeme.
 
@@ -76,8 +79,18 @@ Avoir une maitrise du concepte de tab des fichiers ouvert, tel l'exemple dans na
 
 #### 2 a)
 **Indiquez quels segments de code se trouvent dans l'espace du noyeau du O.S. et du programme utilisateur (application), respectivement.**
-Noyeau: (...)
-Application: (...)
+
+Noyeau: 
+- Copy_to_user
+- Copy_from_user
+- inb
+- outb
+- wait_event_interuptible
+- wake_up_call
+
+Application: 
+- printf
+- 
 
 #### 2 b)
 **Quel est l'utilité des tampons cbuf_in et cbuf_out?**
@@ -99,8 +112,15 @@ L'ensemble d'addresses utilisé par le user ne sont pas les memes que l'ensemble
 
 #### 2 f)
 YAOO le wake_up cest l'inverse du wait_event_interruptible
+
 **Ordonnancez les segments de code (A à E inclusivement) de facon à reproduire le chemin d'une ligne de caracteres entrée au clavier d'un des ordinateurs et destinée à être envoyée sur le port série, pour être ensuite affichée sur l'autre ordinateur.**
-(...) You know, how tf the TP1 works.
+
+Ordonnancement:
+1. writer (endehors du noyeau)
+2. rs232_tut_write
+3. rs232_isr
+4. rs232_read
+5. reader (hors du noyeau)
 
 ### 3
 Faire l'allocation la plus contigu possible, à l'octet près. Le fichier sera en un seul morceau au début, mais on peut lui en ajouter d'autres si nécéssaire. Son emplacement phtsique sera donc représenté par une liste de descripteurs d'extension (des couples <position, taille>).
@@ -114,8 +134,10 @@ Worst-Fit est idéale -- Squeeze? --. Best-Fit est plus complexe à justifié.
 
 #### 3 c)
 **Si vous stockez les informations sur les morceaux alloués au fichier (la liste des descripteurs d'extension) dans l'entrée de répertoire, et que celui-ci est implanté sous forme de liste linéaire, avec des entrées de répertoire de taille fixe, quel problème allez-vous rencontrer? Suggérez une facon de corriger ce problème.**
+
 Visualiser la question. 
 Largeur fixe
+
 |index|nom|empl. phys|
 |:-:|:-:|:-:|
 |0|maName|<pos, taille>|
@@ -125,9 +147,13 @@ Largeur fixe
  - Solution ghetto:
    - ...
 
+probleme: t'as nul pars ou mettre l'information supplementaire. Rajouter un attribut pour l'information supplementaire dans le taableau. On perd de l'espace car la on a un espace dedier a l'info supplementaire. Si non utilis/, ca sert a rien. 
+(-A revoir-)
+
+
 
 ### 4
-Les méthodes d'allocation contigu ou
+Les méthodes d'allocation contigu, 
 
 #### 4 a)
 **Nommez le type de fragmentation associé à chacune de ces méthodes et expliquez en quoi il consiste.**
@@ -137,7 +163,7 @@ Les méthodes d'allocation contigu ou
 **Suggérez et détaillez une méthode pour tenter de minimiser la fragmentation pour chaque méthode d'allocation.**
  - Squeeze
  - Tail-packing
- - (...)
+ - Stocker des donnees (compactes) dans l'en-tete ou, pire encore, dans l'entré de repertoire.
 
 #### 4 c)
 **Normalement, l'allocation par liste chainée est moins performante que l'allocation par index pour implanter l'accès direct. Décrivez une situation ou l'allocation par index souffrira d'un accès plus lent ainsi que de plus en plus de fragmentation que l'allocation chainée.**

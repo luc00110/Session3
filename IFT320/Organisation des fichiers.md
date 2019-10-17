@@ -96,22 +96,29 @@ Retour au [Tableau résumé](#Tableau-Résumé)
 <br>
 
 #### Fragmentation
+
+**Retarder :** le temps que ca prends avant d'avoir la necessité d'utilisé les opperation Éliminer
+
+**Eliminer :** l'espace perdu causé par la fragmentation
+
  - ###### Externe
    - Retarder
      - Algo First-Fit, Best-Fit, Worst-Fit
-   - Eliminer
+   - Eliminer (l'espace perdu causé par la fragmentation)
      - Squeeze : Consolider l'espace libre. 
  - ###### Interne
    - Retarder
      - 2 différentes tialles de bloc et on alloue les petits blocs aux petits fichiers.
    - Eliminer
-     - Tail-packing (difficile)
+     - Tail-packing (difficile) --> Plus simple c'est le systeme à 2 tailles de blocs
      - Stocker des données (compactes) dasn l'en-tête ou, pire encore, dans l'entré de répertoire.
 
 Retour au [Tableau résumé](#Tableau-Résumé)
 
 ##### Fragmentation Externe
 >Assez de capacité pour l'utilisation. Cependant, il est séparé en petits morceaux.
+
+Frag Externe: Ca laisse de l'espace entre les blocs. 
 
 ##### Fragmentation Interne
 >Taille Disque = 2<sup>40</sup>
