@@ -1,0 +1,96 @@
+ - JOSN -
+{ biblio :
+	[
+	{ author :
+		{ "name" : "JRR TOLKEN",
+		  "quote" : "Fly as a kite"
+		},
+	  book :
+		{ "title" : "LOTR",
+		  "year" : 1954
+		}
+	},
+	{ author :
+		{ "name" : "JK ROWLING"
+		},
+	  book :
+		{ "title" : "Harry Potter",
+		  "year" : 1997
+		}
+	}
+	]
+}
+
+
+
+ - JSON SCHEMA - 
+{ "definitions" : { "Author" : { "type" : "object",
+				 "properties" : { "name" : { "type" : "string" },
+						  "quote" : { "type" : "string" },
+					          "required" : ["name"]
+			        		 }
+				},
+		    "Book" : { "type" : "object",
+			       "properties" : { "title" : { "type" : "string"},
+				 		"year" : { "type" : "integer" },
+						"required" : ["title", "year"]
+			      		       }
+			      }
+		   },
+  "title" : "biblio"
+  "type" : "object",
+  "properties" : { "author" : { "$ref : #/definitions/Author" },
+		   "book" : { "$ref : #/definitions/Book"}
+		  }
+}
+
+
+ - XML -
+<biblio>
+	<author id="1" name="JRR TOLKEN" quote="Fly as a kite"/>
+	<author id="2" name="JK ROWLING"/>
+	<book>
+		<title>LOTR</title>
+		<year>1954</year>
+		<author>1</author>
+		</book>
+	<book>
+		<title>Harry Potter</title>
+		<year>1997</year>
+		<author>2</author>
+		</book>
+	</biblio>
+
+
+ - DTD -
+<!ELEMENT biblio (author, book+)*>
+<!ELEMENT author EMPTY>
+<!ATTLIST author
+	name CDATA #REQUIRED
+	quote CDATA #IMPLIED
+>
+<!ELEMENT book author>
+<!ATTLIST book
+	title CDATA #REQUIRED
+	year CDATA #REQUIRED
+>
+
+
+ - XSD -
+<xsd:schema elementFormDefault="qualified">
+<xsd:element name="biblio" type="Biblio"/>
+<xsd:complexType name="Biblio">
+	<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="author" type="Author"/>
+		<xsd:element name="book" type="Book" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:complexeType>
+<xsd:complexeType name="Author">
+	<xsd:attribute name="name" type="xsd:string" use="required"/>
+	<xsd:attribute name="quote" type"scd:string" use="optional"/>
+</xsd:complexeType>
+<xsd:complexeType name="Book">
+	<xsd:attribute name="title" type="xsd:string" use="required"/>
+	<xsd:attribute name="year" type="xsd:int" use="required"/>
+</xsd:complexeType>
+</xsd:schema>
