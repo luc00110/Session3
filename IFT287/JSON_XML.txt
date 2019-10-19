@@ -1,19 +1,19 @@
  - JOSN -
-{ biblio :
+{ "biblio" :
 	[
-	{ author :
+	{ "author" :
 		{ "name" : "JRR TOLKEN",
 		  "quote" : "Fly as a kite"
 		},
-	  book :
+	  "book" :
 		{ "title" : "LOTR",
 		  "year" : 1954
 		}
 	},
-	{ author :
+	{ "author" :
 		{ "name" : "JK ROWLING"
 		},
-	  book :
+	  "book" :
 		{ "title" : "Harry Potter",
 		  "year" : 1997
 		}
