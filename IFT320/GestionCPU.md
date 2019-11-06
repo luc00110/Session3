@@ -46,3 +46,6 @@ Ex.:
  - Rep courant (..?)
  - Unité d'entrées sorties ou ressources associées
  - Affinité avec UCT (Cache)
+
+### Gestion de files multiples et de leurs priorités
+
